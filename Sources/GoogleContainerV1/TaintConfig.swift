@@ -17,47 +17,26 @@
 import Foundation
 import GoogleCloudWkt
 
-/// AdditionalIPRangesConfig is the configuration for individual additional
-/// subnetwork attached to the cluster
-public struct AdditionalIPRangesConfig: Codable, Equatable, GoogleCloudWkt._AnyPackable,
+/// TaintConfig contains the configuration for the taints of the node pool.
+public struct TaintConfig: Codable, Equatable, GoogleCloudWkt._AnyPackable,
   Sendable
 {
-  /// Name of the subnetwork. This can be the full path of the subnetwork or
-  /// just the name.
-  /// Example1: my-subnet
-  /// Example2: projects/gke-project/regions/us-central1/subnetworks/my-subnet
-  public var subnetwork: Swift.String
+  /// Optional. Controls architecture tainting behavior.
+  public var architectureTaintBehavior: TaintConfig.ArchitectureTaintBehavior?
 
-  /// List of secondary ranges names within this subnetwork that can be used for
-  /// pod IPs.
-  /// Example1: gke-pod-range1
-  /// Example2: gke-pod-range1,gke-pod-range2
-  public var podIpv4RangeNames: [Swift.String]
-
-  /// Draining status of the additional subnet.
-  public var status: AdditionalIPRangesConfig.Status
-
-  /// Initialize a new instance of `AdditionalIPRangesConfig`.
+  /// Initialize a new instance of `TaintConfig`.
   public init(
-    subnetwork: Swift.String = Swift.String(),
-    podIpv4RangeNames: [Swift.String] = [],
-    status: AdditionalIPRangesConfig.Status = AdditionalIPRangesConfig.Status(),
+    architectureTaintBehavior: TaintConfig.ArchitectureTaintBehavior? = nil,
   ) {
-    self.subnetwork = subnetwork
-    self.podIpv4RangeNames = podIpv4RangeNames
-    self.status = status
+    self.architectureTaintBehavior = architectureTaintBehavior
   }
 
-  /// Additional subnet with DRAINING status will not be selected during new node
-  /// pool creation. To undrain the draining status, update the cluster to set
-  /// the subnet to ACTIVE status. To remove the additional subnet, use the
-  /// update cluster API to remove the subnet from the
-  /// desired_additional_ip_ranges list. IP ranges can be removed regardless of
-  /// its status, as long as no node pools are using them.
-  public enum Status: Codable, Equatable, Sendable {
+  /// Controls architecture tainting behavior for a node pool.
+  /// New values may be added in the future.
+  public enum ArchitectureTaintBehavior: Codable, Equatable, Sendable {
     case unspecified
-    case active
-    case draining
+    case `none`
+    case arm
     /// Encodes an unknown integer value.
     ///
     /// The most common cause for an unknown values is for the service to send
@@ -81,8 +60,8 @@ public struct AdditionalIPRangesConfig: Codable, Equatable, GoogleCloudWkt._AnyP
     public var intValue: Int? {
       switch self {
       case .unspecified: return 0
-      case .active: return 1
-      case .draining: return 2
+      case .`none`: return 1
+      case .arm: return 2
       case .unknownIntValue(let v): return v
       case .unknownStringValue: return nil
       }
@@ -93,9 +72,9 @@ public struct AdditionalIPRangesConfig: Codable, Equatable, GoogleCloudWkt._AnyP
     /// If the enumeration was initialized with an unknown integer value, this returns `nil`.
     public var stringValue: String? {
       switch self {
-      case .unspecified: return "STATUS_UNSPECIFIED"
-      case .active: return "ACTIVE"
-      case .draining: return "DRAINING"
+      case .unspecified: return "ARCHITECTURE_TAINT_BEHAVIOR_UNSPECIFIED"
+      case .`none`: return "NONE"
+      case .arm: return "ARM"
       case .unknownIntValue: return nil
       case .unknownStringValue(let v): return v
       }
@@ -106,9 +85,9 @@ public struct AdditionalIPRangesConfig: Codable, Equatable, GoogleCloudWkt._AnyP
     /// If the value is unknown, this initializes to ``.unknownStringValue(_:)``.
     public init(stringValue: String) {
       switch stringValue {
-      case "STATUS_UNSPECIFIED": self = .unspecified
-      case "ACTIVE": self = .active
-      case "DRAINING": self = .draining
+      case "ARCHITECTURE_TAINT_BEHAVIOR_UNSPECIFIED": self = .unspecified
+      case "NONE": self = .`none`
+      case "ARM": self = .arm
       default: self = .unknownStringValue(stringValue)
       }
     }
@@ -119,8 +98,8 @@ public struct AdditionalIPRangesConfig: Codable, Equatable, GoogleCloudWkt._AnyP
     public init(intValue: Int) {
       switch intValue {
       case 0: self = .unspecified
-      case 1: self = .active
-      case 2: self = .draining
+      case 1: self = .`none`
+      case 2: self = .arm
       default: self = .unknownIntValue(intValue)
       }
     }
@@ -147,8 +126,8 @@ public struct AdditionalIPRangesConfig: Codable, Equatable, GoogleCloudWkt._AnyP
       var container = encoder.singleValueContainer()
       switch self {
       case .unspecified: return try container.encode(0)
-      case .active: return try container.encode(1)
-      case .draining: return try container.encode(2)
+      case .`none`: return try container.encode(1)
+      case .arm: return try container.encode(2)
       case .unknownIntValue(let v): return try container.encode(v)
       case .unknownStringValue(let v): return try container.encode(v)
       }
@@ -156,7 +135,7 @@ public struct AdditionalIPRangesConfig: Codable, Equatable, GoogleCloudWkt._AnyP
   }
 
   public static var _anyTypeUrl: String {
-    return "type.googleapis.com/google.container.v1.AdditionalIPRangesConfig"
+    return "type.googleapis.com/google.container.v1.TaintConfig"
   }
   public init(fromAny any: GoogleCloudWkt.`Any`) throws {
     self = try GoogleCloudWkt._slowAnyDeserialize(Self.self, from: any)

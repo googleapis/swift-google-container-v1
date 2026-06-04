@@ -17,47 +17,25 @@
 import Foundation
 import GoogleCloudWkt
 
-/// AdditionalIPRangesConfig is the configuration for individual additional
-/// subnetwork attached to the cluster
-public struct AdditionalIPRangesConfig: Codable, Equatable, GoogleCloudWkt._AnyPackable,
+/// DataplaneV2Config is the configuration for DPv2.
+public struct DataplaneV2Config: Codable, Equatable, GoogleCloudWkt._AnyPackable,
   Sendable
 {
-  /// Name of the subnetwork. This can be the full path of the subnetwork or
-  /// just the name.
-  /// Example1: my-subnet
-  /// Example2: projects/gke-project/regions/us-central1/subnetworks/my-subnet
-  public var subnetwork: Swift.String
+  /// Optional. Scalability mode for the cluster.
+  public var scalabilityMode: DataplaneV2Config.ScalabilityMode?
 
-  /// List of secondary ranges names within this subnetwork that can be used for
-  /// pod IPs.
-  /// Example1: gke-pod-range1
-  /// Example2: gke-pod-range1,gke-pod-range2
-  public var podIpv4RangeNames: [Swift.String]
-
-  /// Draining status of the additional subnet.
-  public var status: AdditionalIPRangesConfig.Status
-
-  /// Initialize a new instance of `AdditionalIPRangesConfig`.
+  /// Initialize a new instance of `DataplaneV2Config`.
   public init(
-    subnetwork: Swift.String = Swift.String(),
-    podIpv4RangeNames: [Swift.String] = [],
-    status: AdditionalIPRangesConfig.Status = AdditionalIPRangesConfig.Status(),
+    scalabilityMode: DataplaneV2Config.ScalabilityMode? = nil,
   ) {
-    self.subnetwork = subnetwork
-    self.podIpv4RangeNames = podIpv4RangeNames
-    self.status = status
+    self.scalabilityMode = scalabilityMode
   }
 
-  /// Additional subnet with DRAINING status will not be selected during new node
-  /// pool creation. To undrain the draining status, update the cluster to set
-  /// the subnet to ACTIVE status. To remove the additional subnet, use the
-  /// update cluster API to remove the subnet from the
-  /// desired_additional_ip_ranges list. IP ranges can be removed regardless of
-  /// its status, as long as no node pools are using them.
-  public enum Status: Codable, Equatable, Sendable {
+  /// Options on how to scale the cluster.
+  public enum ScalabilityMode: Codable, Equatable, Sendable {
     case unspecified
-    case active
-    case draining
+    case disabled
+    case scaleOptimized
     /// Encodes an unknown integer value.
     ///
     /// The most common cause for an unknown values is for the service to send
@@ -81,8 +59,8 @@ public struct AdditionalIPRangesConfig: Codable, Equatable, GoogleCloudWkt._AnyP
     public var intValue: Int? {
       switch self {
       case .unspecified: return 0
-      case .active: return 1
-      case .draining: return 2
+      case .disabled: return 3
+      case .scaleOptimized: return 4
       case .unknownIntValue(let v): return v
       case .unknownStringValue: return nil
       }
@@ -93,9 +71,9 @@ public struct AdditionalIPRangesConfig: Codable, Equatable, GoogleCloudWkt._AnyP
     /// If the enumeration was initialized with an unknown integer value, this returns `nil`.
     public var stringValue: String? {
       switch self {
-      case .unspecified: return "STATUS_UNSPECIFIED"
-      case .active: return "ACTIVE"
-      case .draining: return "DRAINING"
+      case .unspecified: return "SCALABILITY_MODE_UNSPECIFIED"
+      case .disabled: return "DISABLED"
+      case .scaleOptimized: return "SCALE_OPTIMIZED"
       case .unknownIntValue: return nil
       case .unknownStringValue(let v): return v
       }
@@ -106,9 +84,9 @@ public struct AdditionalIPRangesConfig: Codable, Equatable, GoogleCloudWkt._AnyP
     /// If the value is unknown, this initializes to ``.unknownStringValue(_:)``.
     public init(stringValue: String) {
       switch stringValue {
-      case "STATUS_UNSPECIFIED": self = .unspecified
-      case "ACTIVE": self = .active
-      case "DRAINING": self = .draining
+      case "SCALABILITY_MODE_UNSPECIFIED": self = .unspecified
+      case "DISABLED": self = .disabled
+      case "SCALE_OPTIMIZED": self = .scaleOptimized
       default: self = .unknownStringValue(stringValue)
       }
     }
@@ -119,8 +97,8 @@ public struct AdditionalIPRangesConfig: Codable, Equatable, GoogleCloudWkt._AnyP
     public init(intValue: Int) {
       switch intValue {
       case 0: self = .unspecified
-      case 1: self = .active
-      case 2: self = .draining
+      case 3: self = .disabled
+      case 4: self = .scaleOptimized
       default: self = .unknownIntValue(intValue)
       }
     }
@@ -147,8 +125,8 @@ public struct AdditionalIPRangesConfig: Codable, Equatable, GoogleCloudWkt._AnyP
       var container = encoder.singleValueContainer()
       switch self {
       case .unspecified: return try container.encode(0)
-      case .active: return try container.encode(1)
-      case .draining: return try container.encode(2)
+      case .disabled: return try container.encode(3)
+      case .scaleOptimized: return try container.encode(4)
       case .unknownIntValue(let v): return try container.encode(v)
       case .unknownStringValue(let v): return try container.encode(v)
       }
@@ -156,7 +134,7 @@ public struct AdditionalIPRangesConfig: Codable, Equatable, GoogleCloudWkt._AnyP
   }
 
   public static var _anyTypeUrl: String {
-    return "type.googleapis.com/google.container.v1.AdditionalIPRangesConfig"
+    return "type.googleapis.com/google.container.v1.DataplaneV2Config"
   }
   public init(fromAny any: GoogleCloudWkt.`Any`) throws {
     self = try GoogleCloudWkt._slowAnyDeserialize(Self.self, from: any)

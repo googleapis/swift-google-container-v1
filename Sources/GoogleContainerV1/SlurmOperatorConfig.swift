@@ -17,22 +17,23 @@
 import Foundation
 import GoogleCloudWkt
 
-/// NodePoolLoggingConfig specifies logging configuration for node pools.
-public struct NodePoolLoggingConfig: Codable, Equatable, GoogleCloudWkt._AnyPackable,
+/// Configuration for the Slurm Operator.
+public struct SlurmOperatorConfig: Codable, Equatable, GoogleCloudWkt._AnyPackable,
   Sendable
 {
-  /// Logging variant configuration.
-  public var variantConfig: LoggingVariantConfig?
+  /// When enabled, it runs a Slurm Operator that manages the set of compute pods
+  /// for Slurm Cluster.
+  public var enabled: Swift.Bool
 
-  /// Initialize a new instance of `NodePoolLoggingConfig`.
+  /// Initialize a new instance of `SlurmOperatorConfig`.
   public init(
-    variantConfig: LoggingVariantConfig? = nil,
+    enabled: Swift.Bool = Swift.Bool(),
   ) {
-    self.variantConfig = variantConfig
+    self.enabled = enabled
   }
 
   public static var _anyTypeUrl: String {
-    return "type.googleapis.com/google.container.v1.NodePoolLoggingConfig"
+    return "type.googleapis.com/google.container.v1.SlurmOperatorConfig"
   }
   public init(fromAny any: GoogleCloudWkt.`Any`) throws {
     self = try GoogleCloudWkt._slowAnyDeserialize(Self.self, from: any)

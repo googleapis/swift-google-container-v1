@@ -17,22 +17,22 @@
 import Foundation
 import GoogleCloudWkt
 
-/// NodePoolLoggingConfig specifies logging configuration for node pools.
-public struct NodePoolLoggingConfig: Codable, Equatable, GoogleCloudWkt._AnyPackable,
+/// Configuration for the AgentSandbox addon.
+public struct AgentSandboxConfig: Codable, Equatable, GoogleCloudWkt._AnyPackable,
   Sendable
 {
-  /// Logging variant configuration.
-  public var variantConfig: LoggingVariantConfig?
+  /// Optional. Whether AgentSandbox is enabled for this cluster.
+  public var enabled: Swift.Bool
 
-  /// Initialize a new instance of `NodePoolLoggingConfig`.
+  /// Initialize a new instance of `AgentSandboxConfig`.
   public init(
-    variantConfig: LoggingVariantConfig? = nil,
+    enabled: Swift.Bool = Swift.Bool(),
   ) {
-    self.variantConfig = variantConfig
+    self.enabled = enabled
   }
 
   public static var _anyTypeUrl: String {
-    return "type.googleapis.com/google.container.v1.NodePoolLoggingConfig"
+    return "type.googleapis.com/google.container.v1.AgentSandboxConfig"
   }
   public init(fromAny any: GoogleCloudWkt.`Any`) throws {
     self = try GoogleCloudWkt._slowAnyDeserialize(Self.self, from: any)

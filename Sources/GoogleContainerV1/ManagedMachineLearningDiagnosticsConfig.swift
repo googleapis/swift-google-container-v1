@@ -17,22 +17,24 @@
 import Foundation
 import GoogleCloudWkt
 
-/// NodePoolLoggingConfig specifies logging configuration for node pools.
-public struct NodePoolLoggingConfig: Codable, Equatable, GoogleCloudWkt._AnyPackable,
+/// ManagedMachineLearningDiagnosticsConfig is the configuration for the GKE
+/// Managed Machine Learning Diagnostics pipeline.
+public struct ManagedMachineLearningDiagnosticsConfig: Codable, Equatable, GoogleCloudWkt
+    ._AnyPackable,
   Sendable
 {
-  /// Logging variant configuration.
-  public var variantConfig: LoggingVariantConfig?
+  /// Enable/Disable Managed Machine Learning Diagnostics.
+  public var enabled: Swift.Bool?
 
-  /// Initialize a new instance of `NodePoolLoggingConfig`.
+  /// Initialize a new instance of `ManagedMachineLearningDiagnosticsConfig`.
   public init(
-    variantConfig: LoggingVariantConfig? = nil,
+    enabled: Swift.Bool? = nil,
   ) {
-    self.variantConfig = variantConfig
+    self.enabled = enabled
   }
 
   public static var _anyTypeUrl: String {
-    return "type.googleapis.com/google.container.v1.NodePoolLoggingConfig"
+    return "type.googleapis.com/google.container.v1.ManagedMachineLearningDiagnosticsConfig"
   }
   public init(fromAny any: GoogleCloudWkt.`Any`) throws {
     self = try GoogleCloudWkt._slowAnyDeserialize(Self.self, from: any)

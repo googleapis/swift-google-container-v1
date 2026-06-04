@@ -17,22 +17,27 @@
 import Foundation
 import GoogleCloudWkt
 
-/// NodePoolLoggingConfig specifies logging configuration for node pools.
-public struct NodePoolLoggingConfig: Codable, Equatable, GoogleCloudWkt._AnyPackable,
+/// CustomImageConfig contains the information r
+public struct CustomImageConfig: Codable, Equatable, GoogleCloudWkt._AnyPackable,
   Sendable
 {
-  /// Logging variant configuration.
-  public var variantConfig: LoggingVariantConfig?
+  /// The name of the image to use for this node.
+  public var image: Swift.String
 
-  /// Initialize a new instance of `NodePoolLoggingConfig`.
+  /// The project containing the image to use for this node.
+  public var imageProject: Swift.String
+
+  /// Initialize a new instance of `CustomImageConfig`.
   public init(
-    variantConfig: LoggingVariantConfig? = nil,
+    image: Swift.String = Swift.String(),
+    imageProject: Swift.String = Swift.String(),
   ) {
-    self.variantConfig = variantConfig
+    self.image = image
+    self.imageProject = imageProject
   }
 
   public static var _anyTypeUrl: String {
-    return "type.googleapis.com/google.container.v1.NodePoolLoggingConfig"
+    return "type.googleapis.com/google.container.v1.CustomImageConfig"
   }
   public init(fromAny any: GoogleCloudWkt.`Any`) throws {
     self = try GoogleCloudWkt._slowAnyDeserialize(Self.self, from: any)

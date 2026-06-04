@@ -17,22 +17,22 @@
 import Foundation
 import GoogleCloudWkt
 
-/// NodePoolLoggingConfig specifies logging configuration for node pools.
-public struct NodePoolLoggingConfig: Codable, Equatable, GoogleCloudWkt._AnyPackable,
+/// PodSnapshotConfig is the configuration for GKE Pod Snapshots feature.
+public struct PodSnapshotConfig: Codable, Equatable, GoogleCloudWkt._AnyPackable,
   Sendable
 {
-  /// Logging variant configuration.
-  public var variantConfig: LoggingVariantConfig?
+  /// Whether or not the Pod Snapshots feature is enabled.
+  public var enabled: Swift.Bool
 
-  /// Initialize a new instance of `NodePoolLoggingConfig`.
+  /// Initialize a new instance of `PodSnapshotConfig`.
   public init(
-    variantConfig: LoggingVariantConfig? = nil,
+    enabled: Swift.Bool = Swift.Bool(),
   ) {
-    self.variantConfig = variantConfig
+    self.enabled = enabled
   }
 
   public static var _anyTypeUrl: String {
-    return "type.googleapis.com/google.container.v1.NodePoolLoggingConfig"
+    return "type.googleapis.com/google.container.v1.PodSnapshotConfig"
   }
   public init(fromAny any: GoogleCloudWkt.`Any`) throws {
     self = try GoogleCloudWkt._slowAnyDeserialize(Self.self, from: any)
