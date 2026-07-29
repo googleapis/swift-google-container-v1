@@ -43,7 +43,7 @@ public class ClusterManagerClient: Clients.ClusterManagerProtocol {
   /// @Snippet(path: "ClusterManager_ListClusters")
   public func listClusters(
     request: ListClustersRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleContainerV1.ListClustersResponse {
+  ) async throws -> GoogleCloudContainerV1.ListClustersResponse {
     try await self.inner.listClusters(request: request, options: options)
   }
 
@@ -52,7 +52,7 @@ public class ClusterManagerClient: Clients.ClusterManagerProtocol {
   /// @Snippet(path: "ClusterManager_GetCluster")
   public func getCluster(
     request: GetClusterRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleContainerV1.Cluster {
+  ) async throws -> GoogleCloudContainerV1.Cluster {
     try await self.inner.getCluster(request: request, options: options)
   }
 
@@ -74,7 +74,7 @@ public class ClusterManagerClient: Clients.ClusterManagerProtocol {
   /// @Snippet(path: "ClusterManager_CreateCluster")
   public func createCluster(
     request: CreateClusterRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleContainerV1.Operation {
+  ) async throws -> GoogleCloudContainerV1.Operation {
     try await self.inner.createCluster(request: request, options: options)
   }
 
@@ -83,7 +83,7 @@ public class ClusterManagerClient: Clients.ClusterManagerProtocol {
   /// @Snippet(path: "ClusterManager_UpdateCluster")
   public func updateCluster(
     request: UpdateClusterRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleContainerV1.Operation {
+  ) async throws -> GoogleCloudContainerV1.Operation {
     try await self.inner.updateCluster(request: request, options: options)
   }
 
@@ -92,7 +92,7 @@ public class ClusterManagerClient: Clients.ClusterManagerProtocol {
   /// @Snippet(path: "ClusterManager_UpdateNodePool")
   public func updateNodePool(
     request: UpdateNodePoolRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleContainerV1.Operation {
+  ) async throws -> GoogleCloudContainerV1.Operation {
     try await self.inner.updateNodePool(request: request, options: options)
   }
 
@@ -101,7 +101,7 @@ public class ClusterManagerClient: Clients.ClusterManagerProtocol {
   /// @Snippet(path: "ClusterManager_SetNodePoolAutoscaling")
   public func setNodePoolAutoscaling(
     request: SetNodePoolAutoscalingRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleContainerV1.Operation {
+  ) async throws -> GoogleCloudContainerV1.Operation {
     try await self.inner.setNodePoolAutoscaling(request: request, options: options)
   }
 
@@ -110,7 +110,7 @@ public class ClusterManagerClient: Clients.ClusterManagerProtocol {
   /// @Snippet(path: "ClusterManager_SetLoggingService")
   public func setLoggingService(
     request: SetLoggingServiceRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleContainerV1.Operation {
+  ) async throws -> GoogleCloudContainerV1.Operation {
     try await self.inner.setLoggingService(request: request, options: options)
   }
 
@@ -119,7 +119,7 @@ public class ClusterManagerClient: Clients.ClusterManagerProtocol {
   /// @Snippet(path: "ClusterManager_SetMonitoringService")
   public func setMonitoringService(
     request: SetMonitoringServiceRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleContainerV1.Operation {
+  ) async throws -> GoogleCloudContainerV1.Operation {
     try await self.inner.setMonitoringService(request: request, options: options)
   }
 
@@ -128,7 +128,7 @@ public class ClusterManagerClient: Clients.ClusterManagerProtocol {
   /// @Snippet(path: "ClusterManager_SetAddonsConfig")
   public func setAddonsConfig(
     request: SetAddonsConfigRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleContainerV1.Operation {
+  ) async throws -> GoogleCloudContainerV1.Operation {
     try await self.inner.setAddonsConfig(request: request, options: options)
   }
 
@@ -141,7 +141,7 @@ public class ClusterManagerClient: Clients.ClusterManagerProtocol {
   @available(*, deprecated)
   public func setLocations(
     request: SetLocationsRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleContainerV1.Operation {
+  ) async throws -> GoogleCloudContainerV1.Operation {
     try await self.inner.setLocations(request: request, options: options)
   }
 
@@ -150,7 +150,7 @@ public class ClusterManagerClient: Clients.ClusterManagerProtocol {
   /// @Snippet(path: "ClusterManager_UpdateMaster")
   public func updateMaster(
     request: UpdateMasterRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleContainerV1.Operation {
+  ) async throws -> GoogleCloudContainerV1.Operation {
     try await self.inner.updateMaster(request: request, options: options)
   }
 
@@ -161,7 +161,7 @@ public class ClusterManagerClient: Clients.ClusterManagerProtocol {
   /// @Snippet(path: "ClusterManager_SetMasterAuth")
   public func setMasterAuth(
     request: SetMasterAuthRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleContainerV1.Operation {
+  ) async throws -> GoogleCloudContainerV1.Operation {
     try await self.inner.setMasterAuth(request: request, options: options)
   }
 
@@ -178,7 +178,7 @@ public class ClusterManagerClient: Clients.ClusterManagerProtocol {
   /// @Snippet(path: "ClusterManager_DeleteCluster")
   public func deleteCluster(
     request: DeleteClusterRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleContainerV1.Operation {
+  ) async throws -> GoogleCloudContainerV1.Operation {
     try await self.inner.deleteCluster(request: request, options: options)
   }
 
@@ -187,7 +187,7 @@ public class ClusterManagerClient: Clients.ClusterManagerProtocol {
   /// @Snippet(path: "ClusterManager_ListOperations")
   public func listOperations(
     request: ListOperationsRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleContainerV1.ListOperationsResponse {
+  ) async throws -> GoogleCloudContainerV1.ListOperationsResponse {
     try await self.inner.listOperations(request: request, options: options)
   }
 
@@ -196,7 +196,7 @@ public class ClusterManagerClient: Clients.ClusterManagerProtocol {
   /// @Snippet(path: "ClusterManager_GetOperation")
   public func getOperation(
     request: GetOperationRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleContainerV1.Operation {
+  ) async throws -> GoogleCloudContainerV1.Operation {
     try await self.inner.getOperation(request: request, options: options)
   }
 
@@ -214,7 +214,7 @@ public class ClusterManagerClient: Clients.ClusterManagerProtocol {
   /// @Snippet(path: "ClusterManager_GetServerConfig")
   public func getServerConfig(
     request: GetServerConfigRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleContainerV1.ServerConfig {
+  ) async throws -> GoogleCloudContainerV1.ServerConfig {
     try await self.inner.getServerConfig(request: request, options: options)
   }
 
@@ -224,7 +224,7 @@ public class ClusterManagerClient: Clients.ClusterManagerProtocol {
   /// @Snippet(path: "ClusterManager_GetJSONWebKeys")
   public func getJsonwebKeys(
     request: GetJSONWebKeysRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleContainerV1.GetJSONWebKeysResponse {
+  ) async throws -> GoogleCloudContainerV1.GetJSONWebKeysResponse {
     try await self.inner.getJsonwebKeys(request: request, options: options)
   }
 
@@ -233,7 +233,7 @@ public class ClusterManagerClient: Clients.ClusterManagerProtocol {
   /// @Snippet(path: "ClusterManager_ListNodePools")
   public func listNodePools(
     request: ListNodePoolsRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleContainerV1.ListNodePoolsResponse {
+  ) async throws -> GoogleCloudContainerV1.ListNodePoolsResponse {
     try await self.inner.listNodePools(request: request, options: options)
   }
 
@@ -242,7 +242,7 @@ public class ClusterManagerClient: Clients.ClusterManagerProtocol {
   /// @Snippet(path: "ClusterManager_GetNodePool")
   public func getNodePool(
     request: GetNodePoolRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleContainerV1.NodePool {
+  ) async throws -> GoogleCloudContainerV1.NodePool {
     try await self.inner.getNodePool(request: request, options: options)
   }
 
@@ -251,7 +251,7 @@ public class ClusterManagerClient: Clients.ClusterManagerProtocol {
   /// @Snippet(path: "ClusterManager_CreateNodePool")
   public func createNodePool(
     request: CreateNodePoolRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleContainerV1.Operation {
+  ) async throws -> GoogleCloudContainerV1.Operation {
     try await self.inner.createNodePool(request: request, options: options)
   }
 
@@ -260,7 +260,7 @@ public class ClusterManagerClient: Clients.ClusterManagerProtocol {
   /// @Snippet(path: "ClusterManager_DeleteNodePool")
   public func deleteNodePool(
     request: DeleteNodePoolRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleContainerV1.Operation {
+  ) async throws -> GoogleCloudContainerV1.Operation {
     try await self.inner.deleteNodePool(request: request, options: options)
   }
 
@@ -280,7 +280,7 @@ public class ClusterManagerClient: Clients.ClusterManagerProtocol {
   /// @Snippet(path: "ClusterManager_RollbackNodePoolUpgrade")
   public func rollbackNodePoolUpgrade(
     request: RollbackNodePoolUpgradeRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleContainerV1.Operation {
+  ) async throws -> GoogleCloudContainerV1.Operation {
     try await self.inner.rollbackNodePoolUpgrade(request: request, options: options)
   }
 
@@ -289,7 +289,7 @@ public class ClusterManagerClient: Clients.ClusterManagerProtocol {
   /// @Snippet(path: "ClusterManager_SetNodePoolManagement")
   public func setNodePoolManagement(
     request: SetNodePoolManagementRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleContainerV1.Operation {
+  ) async throws -> GoogleCloudContainerV1.Operation {
     try await self.inner.setNodePoolManagement(request: request, options: options)
   }
 
@@ -298,7 +298,7 @@ public class ClusterManagerClient: Clients.ClusterManagerProtocol {
   /// @Snippet(path: "ClusterManager_SetLabels")
   public func setLabels(
     request: SetLabelsRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleContainerV1.Operation {
+  ) async throws -> GoogleCloudContainerV1.Operation {
     try await self.inner.setLabels(request: request, options: options)
   }
 
@@ -307,7 +307,7 @@ public class ClusterManagerClient: Clients.ClusterManagerProtocol {
   /// @Snippet(path: "ClusterManager_SetLegacyAbac")
   public func setLegacyAbac(
     request: SetLegacyAbacRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleContainerV1.Operation {
+  ) async throws -> GoogleCloudContainerV1.Operation {
     try await self.inner.setLegacyAbac(request: request, options: options)
   }
 
@@ -316,7 +316,7 @@ public class ClusterManagerClient: Clients.ClusterManagerProtocol {
   /// @Snippet(path: "ClusterManager_StartIPRotation")
   public func startIprotation(
     request: StartIPRotationRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleContainerV1.Operation {
+  ) async throws -> GoogleCloudContainerV1.Operation {
     try await self.inner.startIprotation(request: request, options: options)
   }
 
@@ -325,7 +325,7 @@ public class ClusterManagerClient: Clients.ClusterManagerProtocol {
   /// @Snippet(path: "ClusterManager_CompleteIPRotation")
   public func completeIprotation(
     request: CompleteIPRotationRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleContainerV1.Operation {
+  ) async throws -> GoogleCloudContainerV1.Operation {
     try await self.inner.completeIprotation(request: request, options: options)
   }
 
@@ -338,7 +338,7 @@ public class ClusterManagerClient: Clients.ClusterManagerProtocol {
   /// @Snippet(path: "ClusterManager_SetNodePoolSize")
   public func setNodePoolSize(
     request: SetNodePoolSizeRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleContainerV1.Operation {
+  ) async throws -> GoogleCloudContainerV1.Operation {
     try await self.inner.setNodePoolSize(request: request, options: options)
   }
 
@@ -347,7 +347,7 @@ public class ClusterManagerClient: Clients.ClusterManagerProtocol {
   /// @Snippet(path: "ClusterManager_SetNetworkPolicy")
   public func setNetworkPolicy(
     request: SetNetworkPolicyRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleContainerV1.Operation {
+  ) async throws -> GoogleCloudContainerV1.Operation {
     try await self.inner.setNetworkPolicy(request: request, options: options)
   }
 
@@ -356,7 +356,7 @@ public class ClusterManagerClient: Clients.ClusterManagerProtocol {
   /// @Snippet(path: "ClusterManager_SetMaintenancePolicy")
   public func setMaintenancePolicy(
     request: SetMaintenancePolicyRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleContainerV1.Operation {
+  ) async throws -> GoogleCloudContainerV1.Operation {
     try await self.inner.setMaintenancePolicy(request: request, options: options)
   }
 
@@ -365,7 +365,7 @@ public class ClusterManagerClient: Clients.ClusterManagerProtocol {
   /// @Snippet(path: "ClusterManager_ListUsableSubnetworks")
   public func listUsableSubnetworks(
     request: ListUsableSubnetworksRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleContainerV1.ListUsableSubnetworksResponse {
+  ) async throws -> GoogleCloudContainerV1.ListUsableSubnetworksResponse {
     try await self.inner.listUsableSubnetworks(request: request, options: options)
   }
 
@@ -376,7 +376,7 @@ public class ClusterManagerClient: Clients.ClusterManagerProtocol {
     byItem: ListUsableSubnetworksRequest, options: GoogleCloudGax.RequestOptions
   ) throws -> any AsyncSequence<UsableSubnetwork, Swift.Error> {
     let listRpc = {
-      (token: Swift.String) async throws -> GoogleContainerV1.ListUsableSubnetworksResponse in
+      (token: Swift.String) async throws -> GoogleCloudContainerV1.ListUsableSubnetworksResponse in
       var request = byItem
       request.pageToken = token
       return try await self.listUsableSubnetworks(request: request, options: options)
@@ -390,7 +390,7 @@ public class ClusterManagerClient: Clients.ClusterManagerProtocol {
   /// @Snippet(path: "ClusterManager_CheckAutopilotCompatibility")
   public func checkAutopilotCompatibility(
     request: CheckAutopilotCompatibilityRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleContainerV1.CheckAutopilotCompatibilityResponse {
+  ) async throws -> GoogleCloudContainerV1.CheckAutopilotCompatibilityResponse {
     try await self.inner.checkAutopilotCompatibility(request: request, options: options)
   }
 
@@ -399,7 +399,7 @@ public class ClusterManagerClient: Clients.ClusterManagerProtocol {
   /// @Snippet(path: "ClusterManager_FetchClusterUpgradeInfo")
   public func fetchClusterUpgradeInfo(
     request: FetchClusterUpgradeInfoRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleContainerV1.ClusterUpgradeInfo {
+  ) async throws -> GoogleCloudContainerV1.ClusterUpgradeInfo {
     try await self.inner.fetchClusterUpgradeInfo(request: request, options: options)
   }
 
@@ -408,7 +408,7 @@ public class ClusterManagerClient: Clients.ClusterManagerProtocol {
   /// @Snippet(path: "ClusterManager_FetchNodePoolUpgradeInfo")
   public func fetchNodePoolUpgradeInfo(
     request: FetchNodePoolUpgradeInfoRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleContainerV1.NodePoolUpgradeInfo {
+  ) async throws -> GoogleCloudContainerV1.NodePoolUpgradeInfo {
     try await self.inner.fetchNodePoolUpgradeInfo(request: request, options: options)
   }
 }
@@ -422,52 +422,54 @@ extension Clients {
   public protocol ClusterManagerProtocol {
     /// See `ClusterManagerClient.listClusters`.
     func listClusters(request: ListClustersRequest) async throws
-      -> GoogleContainerV1.ListClustersResponse
+      -> GoogleCloudContainerV1.ListClustersResponse
 
     /// See `ClusterManagerClient.listClusters`.
     func listClusters(
       projectId: Swift.String,
       zone: Swift.String,
-    ) async throws -> GoogleContainerV1.ListClustersResponse
+    ) async throws -> GoogleCloudContainerV1.ListClustersResponse
 
     /// See `ClusterManagerClient.listClusters`.
     func listClusters(
       parent: Swift.String,
-    ) async throws -> GoogleContainerV1.ListClustersResponse
+    ) async throws -> GoogleCloudContainerV1.ListClustersResponse
 
     /// See `ClusterManagerClient.getCluster`.
-    func getCluster(request: GetClusterRequest) async throws -> GoogleContainerV1.Cluster
+    func getCluster(request: GetClusterRequest) async throws -> GoogleCloudContainerV1.Cluster
 
     /// See `ClusterManagerClient.getCluster`.
     func getCluster(
       projectId: Swift.String,
       zone: Swift.String,
       clusterId: Swift.String,
-    ) async throws -> GoogleContainerV1.Cluster
+    ) async throws -> GoogleCloudContainerV1.Cluster
 
     /// See `ClusterManagerClient.getCluster`.
     func getCluster(
       name: Swift.String,
-    ) async throws -> GoogleContainerV1.Cluster
+    ) async throws -> GoogleCloudContainerV1.Cluster
 
     /// See `ClusterManagerClient.createCluster`.
-    func createCluster(request: CreateClusterRequest) async throws -> GoogleContainerV1.Operation
+    func createCluster(request: CreateClusterRequest) async throws
+      -> GoogleCloudContainerV1.Operation
 
     /// See `ClusterManagerClient.createCluster`.
     func createCluster(
       projectId: Swift.String,
       zone: Swift.String,
       cluster: Cluster?,
-    ) async throws -> GoogleContainerV1.Operation
+    ) async throws -> GoogleCloudContainerV1.Operation
 
     /// See `ClusterManagerClient.createCluster`.
     func createCluster(
       parent: Swift.String,
       cluster: Cluster?,
-    ) async throws -> GoogleContainerV1.Operation
+    ) async throws -> GoogleCloudContainerV1.Operation
 
     /// See `ClusterManagerClient.updateCluster`.
-    func updateCluster(request: UpdateClusterRequest) async throws -> GoogleContainerV1.Operation
+    func updateCluster(request: UpdateClusterRequest) async throws
+      -> GoogleCloudContainerV1.Operation
 
     /// See `ClusterManagerClient.updateCluster`.
     func updateCluster(
@@ -475,24 +477,25 @@ extension Clients {
       zone: Swift.String,
       clusterId: Swift.String,
       update: ClusterUpdate?,
-    ) async throws -> GoogleContainerV1.Operation
+    ) async throws -> GoogleCloudContainerV1.Operation
 
     /// See `ClusterManagerClient.updateCluster`.
     func updateCluster(
       name: Swift.String,
       update: ClusterUpdate?,
-    ) async throws -> GoogleContainerV1.Operation
+    ) async throws -> GoogleCloudContainerV1.Operation
 
     /// See `ClusterManagerClient.updateNodePool`.
-    func updateNodePool(request: UpdateNodePoolRequest) async throws -> GoogleContainerV1.Operation
+    func updateNodePool(request: UpdateNodePoolRequest) async throws
+      -> GoogleCloudContainerV1.Operation
 
     /// See `ClusterManagerClient.setNodePoolAutoscaling`.
     func setNodePoolAutoscaling(request: SetNodePoolAutoscalingRequest) async throws
-      -> GoogleContainerV1.Operation
+      -> GoogleCloudContainerV1.Operation
 
     /// See `ClusterManagerClient.setLoggingService`.
     func setLoggingService(request: SetLoggingServiceRequest) async throws
-      -> GoogleContainerV1.Operation
+      -> GoogleCloudContainerV1.Operation
 
     /// See `ClusterManagerClient.setLoggingService`.
     func setLoggingService(
@@ -500,17 +503,17 @@ extension Clients {
       zone: Swift.String,
       clusterId: Swift.String,
       loggingService: Swift.String,
-    ) async throws -> GoogleContainerV1.Operation
+    ) async throws -> GoogleCloudContainerV1.Operation
 
     /// See `ClusterManagerClient.setLoggingService`.
     func setLoggingService(
       name: Swift.String,
       loggingService: Swift.String,
-    ) async throws -> GoogleContainerV1.Operation
+    ) async throws -> GoogleCloudContainerV1.Operation
 
     /// See `ClusterManagerClient.setMonitoringService`.
     func setMonitoringService(request: SetMonitoringServiceRequest) async throws
-      -> GoogleContainerV1.Operation
+      -> GoogleCloudContainerV1.Operation
 
     /// See `ClusterManagerClient.setMonitoringService`.
     func setMonitoringService(
@@ -518,17 +521,17 @@ extension Clients {
       zone: Swift.String,
       clusterId: Swift.String,
       monitoringService: Swift.String,
-    ) async throws -> GoogleContainerV1.Operation
+    ) async throws -> GoogleCloudContainerV1.Operation
 
     /// See `ClusterManagerClient.setMonitoringService`.
     func setMonitoringService(
       name: Swift.String,
       monitoringService: Swift.String,
-    ) async throws -> GoogleContainerV1.Operation
+    ) async throws -> GoogleCloudContainerV1.Operation
 
     /// See `ClusterManagerClient.setAddonsConfig`.
     func setAddonsConfig(request: SetAddonsConfigRequest) async throws
-      -> GoogleContainerV1.Operation
+      -> GoogleCloudContainerV1.Operation
 
     /// See `ClusterManagerClient.setAddonsConfig`.
     func setAddonsConfig(
@@ -536,17 +539,17 @@ extension Clients {
       zone: Swift.String,
       clusterId: Swift.String,
       addonsConfig: AddonsConfig?,
-    ) async throws -> GoogleContainerV1.Operation
+    ) async throws -> GoogleCloudContainerV1.Operation
 
     /// See `ClusterManagerClient.setAddonsConfig`.
     func setAddonsConfig(
       name: Swift.String,
       addonsConfig: AddonsConfig?,
-    ) async throws -> GoogleContainerV1.Operation
+    ) async throws -> GoogleCloudContainerV1.Operation
 
     /// See `ClusterManagerClient.setLocations`.
     @available(*, deprecated)
-    func setLocations(request: SetLocationsRequest) async throws -> GoogleContainerV1.Operation
+    func setLocations(request: SetLocationsRequest) async throws -> GoogleCloudContainerV1.Operation
 
     /// See `ClusterManagerClient.setLocations`.
     @available(*, deprecated)
@@ -555,17 +558,17 @@ extension Clients {
       zone: Swift.String,
       clusterId: Swift.String,
       locations: [Swift.String],
-    ) async throws -> GoogleContainerV1.Operation
+    ) async throws -> GoogleCloudContainerV1.Operation
 
     /// See `ClusterManagerClient.setLocations`.
     @available(*, deprecated)
     func setLocations(
       name: Swift.String,
       locations: [Swift.String],
-    ) async throws -> GoogleContainerV1.Operation
+    ) async throws -> GoogleCloudContainerV1.Operation
 
     /// See `ClusterManagerClient.updateMaster`.
-    func updateMaster(request: UpdateMasterRequest) async throws -> GoogleContainerV1.Operation
+    func updateMaster(request: UpdateMasterRequest) async throws -> GoogleCloudContainerV1.Operation
 
     /// See `ClusterManagerClient.updateMaster`.
     func updateMaster(
@@ -573,61 +576,63 @@ extension Clients {
       zone: Swift.String,
       clusterId: Swift.String,
       masterVersion: Swift.String,
-    ) async throws -> GoogleContainerV1.Operation
+    ) async throws -> GoogleCloudContainerV1.Operation
 
     /// See `ClusterManagerClient.updateMaster`.
     func updateMaster(
       name: Swift.String,
       masterVersion: Swift.String,
-    ) async throws -> GoogleContainerV1.Operation
+    ) async throws -> GoogleCloudContainerV1.Operation
 
     /// See `ClusterManagerClient.setMasterAuth`.
-    func setMasterAuth(request: SetMasterAuthRequest) async throws -> GoogleContainerV1.Operation
+    func setMasterAuth(request: SetMasterAuthRequest) async throws
+      -> GoogleCloudContainerV1.Operation
 
     /// See `ClusterManagerClient.deleteCluster`.
-    func deleteCluster(request: DeleteClusterRequest) async throws -> GoogleContainerV1.Operation
+    func deleteCluster(request: DeleteClusterRequest) async throws
+      -> GoogleCloudContainerV1.Operation
 
     /// See `ClusterManagerClient.deleteCluster`.
     func deleteCluster(
       projectId: Swift.String,
       zone: Swift.String,
       clusterId: Swift.String,
-    ) async throws -> GoogleContainerV1.Operation
+    ) async throws -> GoogleCloudContainerV1.Operation
 
     /// See `ClusterManagerClient.deleteCluster`.
     func deleteCluster(
       name: Swift.String,
-    ) async throws -> GoogleContainerV1.Operation
+    ) async throws -> GoogleCloudContainerV1.Operation
 
     /// See `ClusterManagerClient.listOperations`.
     func listOperations(request: ListOperationsRequest) async throws
-      -> GoogleContainerV1.ListOperationsResponse
+      -> GoogleCloudContainerV1.ListOperationsResponse
 
     /// See `ClusterManagerClient.listOperations`.
     func listOperations(
       projectId: Swift.String,
       zone: Swift.String,
-    ) async throws -> GoogleContainerV1.ListOperationsResponse
+    ) async throws -> GoogleCloudContainerV1.ListOperationsResponse
 
     /// See `ClusterManagerClient.listOperations`.
     func listOperations(
       parent: Swift.String,
-    ) async throws -> GoogleContainerV1.ListOperationsResponse
+    ) async throws -> GoogleCloudContainerV1.ListOperationsResponse
 
     /// See `ClusterManagerClient.getOperation`.
-    func getOperation(request: GetOperationRequest) async throws -> GoogleContainerV1.Operation
+    func getOperation(request: GetOperationRequest) async throws -> GoogleCloudContainerV1.Operation
 
     /// See `ClusterManagerClient.getOperation`.
     func getOperation(
       projectId: Swift.String,
       zone: Swift.String,
       operationId: Swift.String,
-    ) async throws -> GoogleContainerV1.Operation
+    ) async throws -> GoogleCloudContainerV1.Operation
 
     /// See `ClusterManagerClient.getOperation`.
     func getOperation(
       name: Swift.String,
-    ) async throws -> GoogleContainerV1.Operation
+    ) async throws -> GoogleCloudContainerV1.Operation
 
     /// See `ClusterManagerClient.cancelOperation`.
     func cancelOperation(request: CancelOperationRequest) async throws
@@ -646,41 +651,41 @@ extension Clients {
 
     /// See `ClusterManagerClient.getServerConfig`.
     func getServerConfig(request: GetServerConfigRequest) async throws
-      -> GoogleContainerV1.ServerConfig
+      -> GoogleCloudContainerV1.ServerConfig
 
     /// See `ClusterManagerClient.getServerConfig`.
     func getServerConfig(
       projectId: Swift.String,
       zone: Swift.String,
-    ) async throws -> GoogleContainerV1.ServerConfig
+    ) async throws -> GoogleCloudContainerV1.ServerConfig
 
     /// See `ClusterManagerClient.getServerConfig`.
     func getServerConfig(
       name: Swift.String,
-    ) async throws -> GoogleContainerV1.ServerConfig
+    ) async throws -> GoogleCloudContainerV1.ServerConfig
 
     /// See `ClusterManagerClient.getJsonwebKeys`.
     func getJsonwebKeys(request: GetJSONWebKeysRequest) async throws
-      -> GoogleContainerV1.GetJSONWebKeysResponse
+      -> GoogleCloudContainerV1.GetJSONWebKeysResponse
 
     /// See `ClusterManagerClient.listNodePools`.
     func listNodePools(request: ListNodePoolsRequest) async throws
-      -> GoogleContainerV1.ListNodePoolsResponse
+      -> GoogleCloudContainerV1.ListNodePoolsResponse
 
     /// See `ClusterManagerClient.listNodePools`.
     func listNodePools(
       projectId: Swift.String,
       zone: Swift.String,
       clusterId: Swift.String,
-    ) async throws -> GoogleContainerV1.ListNodePoolsResponse
+    ) async throws -> GoogleCloudContainerV1.ListNodePoolsResponse
 
     /// See `ClusterManagerClient.listNodePools`.
     func listNodePools(
       parent: Swift.String,
-    ) async throws -> GoogleContainerV1.ListNodePoolsResponse
+    ) async throws -> GoogleCloudContainerV1.ListNodePoolsResponse
 
     /// See `ClusterManagerClient.getNodePool`.
-    func getNodePool(request: GetNodePoolRequest) async throws -> GoogleContainerV1.NodePool
+    func getNodePool(request: GetNodePoolRequest) async throws -> GoogleCloudContainerV1.NodePool
 
     /// See `ClusterManagerClient.getNodePool`.
     func getNodePool(
@@ -688,15 +693,16 @@ extension Clients {
       zone: Swift.String,
       clusterId: Swift.String,
       nodePoolId: Swift.String,
-    ) async throws -> GoogleContainerV1.NodePool
+    ) async throws -> GoogleCloudContainerV1.NodePool
 
     /// See `ClusterManagerClient.getNodePool`.
     func getNodePool(
       name: Swift.String,
-    ) async throws -> GoogleContainerV1.NodePool
+    ) async throws -> GoogleCloudContainerV1.NodePool
 
     /// See `ClusterManagerClient.createNodePool`.
-    func createNodePool(request: CreateNodePoolRequest) async throws -> GoogleContainerV1.Operation
+    func createNodePool(request: CreateNodePoolRequest) async throws
+      -> GoogleCloudContainerV1.Operation
 
     /// See `ClusterManagerClient.createNodePool`.
     func createNodePool(
@@ -704,16 +710,17 @@ extension Clients {
       zone: Swift.String,
       clusterId: Swift.String,
       nodePool: NodePool?,
-    ) async throws -> GoogleContainerV1.Operation
+    ) async throws -> GoogleCloudContainerV1.Operation
 
     /// See `ClusterManagerClient.createNodePool`.
     func createNodePool(
       parent: Swift.String,
       nodePool: NodePool?,
-    ) async throws -> GoogleContainerV1.Operation
+    ) async throws -> GoogleCloudContainerV1.Operation
 
     /// See `ClusterManagerClient.deleteNodePool`.
-    func deleteNodePool(request: DeleteNodePoolRequest) async throws -> GoogleContainerV1.Operation
+    func deleteNodePool(request: DeleteNodePoolRequest) async throws
+      -> GoogleCloudContainerV1.Operation
 
     /// See `ClusterManagerClient.deleteNodePool`.
     func deleteNodePool(
@@ -721,19 +728,19 @@ extension Clients {
       zone: Swift.String,
       clusterId: Swift.String,
       nodePoolId: Swift.String,
-    ) async throws -> GoogleContainerV1.Operation
+    ) async throws -> GoogleCloudContainerV1.Operation
 
     /// See `ClusterManagerClient.deleteNodePool`.
     func deleteNodePool(
       name: Swift.String,
-    ) async throws -> GoogleContainerV1.Operation
+    ) async throws -> GoogleCloudContainerV1.Operation
 
     /// See `ClusterManagerClient.completeNodePoolUpgrade`.
     func completeNodePoolUpgrade(request: CompleteNodePoolUpgradeRequest) async throws
 
     /// See `ClusterManagerClient.rollbackNodePoolUpgrade`.
     func rollbackNodePoolUpgrade(request: RollbackNodePoolUpgradeRequest) async throws
-      -> GoogleContainerV1.Operation
+      -> GoogleCloudContainerV1.Operation
 
     /// See `ClusterManagerClient.rollbackNodePoolUpgrade`.
     func rollbackNodePoolUpgrade(
@@ -741,22 +748,23 @@ extension Clients {
       zone: Swift.String,
       clusterId: Swift.String,
       nodePoolId: Swift.String,
-    ) async throws -> GoogleContainerV1.Operation
+    ) async throws -> GoogleCloudContainerV1.Operation
 
     /// See `ClusterManagerClient.rollbackNodePoolUpgrade`.
     func rollbackNodePoolUpgrade(
       name: Swift.String,
-    ) async throws -> GoogleContainerV1.Operation
+    ) async throws -> GoogleCloudContainerV1.Operation
 
     /// See `ClusterManagerClient.setNodePoolManagement`.
     func setNodePoolManagement(request: SetNodePoolManagementRequest) async throws
-      -> GoogleContainerV1.Operation
+      -> GoogleCloudContainerV1.Operation
 
     /// See `ClusterManagerClient.setLabels`.
-    func setLabels(request: SetLabelsRequest) async throws -> GoogleContainerV1.Operation
+    func setLabels(request: SetLabelsRequest) async throws -> GoogleCloudContainerV1.Operation
 
     /// See `ClusterManagerClient.setLegacyAbac`.
-    func setLegacyAbac(request: SetLegacyAbacRequest) async throws -> GoogleContainerV1.Operation
+    func setLegacyAbac(request: SetLegacyAbacRequest) async throws
+      -> GoogleCloudContainerV1.Operation
 
     /// See `ClusterManagerClient.setLegacyAbac`.
     func setLegacyAbac(
@@ -764,53 +772,53 @@ extension Clients {
       zone: Swift.String,
       clusterId: Swift.String,
       enabled: Swift.Bool,
-    ) async throws -> GoogleContainerV1.Operation
+    ) async throws -> GoogleCloudContainerV1.Operation
 
     /// See `ClusterManagerClient.setLegacyAbac`.
     func setLegacyAbac(
       name: Swift.String,
       enabled: Swift.Bool,
-    ) async throws -> GoogleContainerV1.Operation
+    ) async throws -> GoogleCloudContainerV1.Operation
 
     /// See `ClusterManagerClient.startIprotation`.
     func startIprotation(request: StartIPRotationRequest) async throws
-      -> GoogleContainerV1.Operation
+      -> GoogleCloudContainerV1.Operation
 
     /// See `ClusterManagerClient.startIprotation`.
     func startIprotation(
       projectId: Swift.String,
       zone: Swift.String,
       clusterId: Swift.String,
-    ) async throws -> GoogleContainerV1.Operation
+    ) async throws -> GoogleCloudContainerV1.Operation
 
     /// See `ClusterManagerClient.startIprotation`.
     func startIprotation(
       name: Swift.String,
-    ) async throws -> GoogleContainerV1.Operation
+    ) async throws -> GoogleCloudContainerV1.Operation
 
     /// See `ClusterManagerClient.completeIprotation`.
     func completeIprotation(request: CompleteIPRotationRequest) async throws
-      -> GoogleContainerV1.Operation
+      -> GoogleCloudContainerV1.Operation
 
     /// See `ClusterManagerClient.completeIprotation`.
     func completeIprotation(
       projectId: Swift.String,
       zone: Swift.String,
       clusterId: Swift.String,
-    ) async throws -> GoogleContainerV1.Operation
+    ) async throws -> GoogleCloudContainerV1.Operation
 
     /// See `ClusterManagerClient.completeIprotation`.
     func completeIprotation(
       name: Swift.String,
-    ) async throws -> GoogleContainerV1.Operation
+    ) async throws -> GoogleCloudContainerV1.Operation
 
     /// See `ClusterManagerClient.setNodePoolSize`.
     func setNodePoolSize(request: SetNodePoolSizeRequest) async throws
-      -> GoogleContainerV1.Operation
+      -> GoogleCloudContainerV1.Operation
 
     /// See `ClusterManagerClient.setNetworkPolicy`.
     func setNetworkPolicy(request: SetNetworkPolicyRequest) async throws
-      -> GoogleContainerV1.Operation
+      -> GoogleCloudContainerV1.Operation
 
     /// See `ClusterManagerClient.setNetworkPolicy`.
     func setNetworkPolicy(
@@ -818,17 +826,17 @@ extension Clients {
       zone: Swift.String,
       clusterId: Swift.String,
       networkPolicy: NetworkPolicy?,
-    ) async throws -> GoogleContainerV1.Operation
+    ) async throws -> GoogleCloudContainerV1.Operation
 
     /// See `ClusterManagerClient.setNetworkPolicy`.
     func setNetworkPolicy(
       name: Swift.String,
       networkPolicy: NetworkPolicy?,
-    ) async throws -> GoogleContainerV1.Operation
+    ) async throws -> GoogleCloudContainerV1.Operation
 
     /// See `ClusterManagerClient.setMaintenancePolicy`.
     func setMaintenancePolicy(request: SetMaintenancePolicyRequest) async throws
-      -> GoogleContainerV1.Operation
+      -> GoogleCloudContainerV1.Operation
 
     /// See `ClusterManagerClient.setMaintenancePolicy`.
     func setMaintenancePolicy(
@@ -836,17 +844,17 @@ extension Clients {
       zone: Swift.String,
       clusterId: Swift.String,
       maintenancePolicy: MaintenancePolicy?,
-    ) async throws -> GoogleContainerV1.Operation
+    ) async throws -> GoogleCloudContainerV1.Operation
 
     /// See `ClusterManagerClient.setMaintenancePolicy`.
     func setMaintenancePolicy(
       name: Swift.String,
       maintenancePolicy: MaintenancePolicy?,
-    ) async throws -> GoogleContainerV1.Operation
+    ) async throws -> GoogleCloudContainerV1.Operation
 
     /// See `ClusterManagerClient.listUsableSubnetworks`.
     func listUsableSubnetworks(request: ListUsableSubnetworksRequest) async throws
-      -> GoogleContainerV1.ListUsableSubnetworksResponse
+      -> GoogleCloudContainerV1.ListUsableSubnetworksResponse
 
     /// See `ClusterManagerClient.listUsableSubnetworks`.
     func listUsableSubnetworks(
@@ -855,101 +863,101 @@ extension Clients {
 
     /// See `ClusterManagerClient.checkAutopilotCompatibility`.
     func checkAutopilotCompatibility(request: CheckAutopilotCompatibilityRequest) async throws
-      -> GoogleContainerV1.CheckAutopilotCompatibilityResponse
+      -> GoogleCloudContainerV1.CheckAutopilotCompatibilityResponse
 
     /// See `ClusterManagerClient.fetchClusterUpgradeInfo`.
     func fetchClusterUpgradeInfo(request: FetchClusterUpgradeInfoRequest) async throws
-      -> GoogleContainerV1.ClusterUpgradeInfo
+      -> GoogleCloudContainerV1.ClusterUpgradeInfo
 
     /// See `ClusterManagerClient.fetchClusterUpgradeInfo`.
     func fetchClusterUpgradeInfo(
       name: Swift.String,
-    ) async throws -> GoogleContainerV1.ClusterUpgradeInfo
+    ) async throws -> GoogleCloudContainerV1.ClusterUpgradeInfo
 
     /// See `ClusterManagerClient.fetchNodePoolUpgradeInfo`.
     func fetchNodePoolUpgradeInfo(request: FetchNodePoolUpgradeInfoRequest) async throws
-      -> GoogleContainerV1.NodePoolUpgradeInfo
+      -> GoogleCloudContainerV1.NodePoolUpgradeInfo
 
     /// See `ClusterManagerClient.fetchNodePoolUpgradeInfo`.
     func fetchNodePoolUpgradeInfo(
       name: Swift.String,
-    ) async throws -> GoogleContainerV1.NodePoolUpgradeInfo
+    ) async throws -> GoogleCloudContainerV1.NodePoolUpgradeInfo
 
     /// See `ClusterManagerClient.listClusters`.
     func listClusters(
       request: ListClustersRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleContainerV1.ListClustersResponse
+    ) async throws -> GoogleCloudContainerV1.ListClustersResponse
 
     /// See `ClusterManagerClient.getCluster`.
     func getCluster(
       request: GetClusterRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleContainerV1.Cluster
+    ) async throws -> GoogleCloudContainerV1.Cluster
 
     /// See `ClusterManagerClient.createCluster`.
     func createCluster(
       request: CreateClusterRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleContainerV1.Operation
+    ) async throws -> GoogleCloudContainerV1.Operation
 
     /// See `ClusterManagerClient.updateCluster`.
     func updateCluster(
       request: UpdateClusterRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleContainerV1.Operation
+    ) async throws -> GoogleCloudContainerV1.Operation
 
     /// See `ClusterManagerClient.updateNodePool`.
     func updateNodePool(
       request: UpdateNodePoolRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleContainerV1.Operation
+    ) async throws -> GoogleCloudContainerV1.Operation
 
     /// See `ClusterManagerClient.setNodePoolAutoscaling`.
     func setNodePoolAutoscaling(
       request: SetNodePoolAutoscalingRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleContainerV1.Operation
+    ) async throws -> GoogleCloudContainerV1.Operation
 
     /// See `ClusterManagerClient.setLoggingService`.
     func setLoggingService(
       request: SetLoggingServiceRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleContainerV1.Operation
+    ) async throws -> GoogleCloudContainerV1.Operation
 
     /// See `ClusterManagerClient.setMonitoringService`.
     func setMonitoringService(
       request: SetMonitoringServiceRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleContainerV1.Operation
+    ) async throws -> GoogleCloudContainerV1.Operation
 
     /// See `ClusterManagerClient.setAddonsConfig`.
     func setAddonsConfig(
       request: SetAddonsConfigRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleContainerV1.Operation
+    ) async throws -> GoogleCloudContainerV1.Operation
 
     /// See `ClusterManagerClient.setLocations`.
     @available(*, deprecated)
     func setLocations(
       request: SetLocationsRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleContainerV1.Operation
+    ) async throws -> GoogleCloudContainerV1.Operation
 
     /// See `ClusterManagerClient.updateMaster`.
     func updateMaster(
       request: UpdateMasterRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleContainerV1.Operation
+    ) async throws -> GoogleCloudContainerV1.Operation
 
     /// See `ClusterManagerClient.setMasterAuth`.
     func setMasterAuth(
       request: SetMasterAuthRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleContainerV1.Operation
+    ) async throws -> GoogleCloudContainerV1.Operation
 
     /// See `ClusterManagerClient.deleteCluster`.
     func deleteCluster(
       request: DeleteClusterRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleContainerV1.Operation
+    ) async throws -> GoogleCloudContainerV1.Operation
 
     /// See `ClusterManagerClient.listOperations`.
     func listOperations(
       request: ListOperationsRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleContainerV1.ListOperationsResponse
+    ) async throws -> GoogleCloudContainerV1.ListOperationsResponse
 
     /// See `ClusterManagerClient.getOperation`.
     func getOperation(
       request: GetOperationRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleContainerV1.Operation
+    ) async throws -> GoogleCloudContainerV1.Operation
 
     /// See `ClusterManagerClient.cancelOperation`.
     func cancelOperation(
@@ -959,32 +967,32 @@ extension Clients {
     /// See `ClusterManagerClient.getServerConfig`.
     func getServerConfig(
       request: GetServerConfigRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleContainerV1.ServerConfig
+    ) async throws -> GoogleCloudContainerV1.ServerConfig
 
     /// See `ClusterManagerClient.getJsonwebKeys`.
     func getJsonwebKeys(
       request: GetJSONWebKeysRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleContainerV1.GetJSONWebKeysResponse
+    ) async throws -> GoogleCloudContainerV1.GetJSONWebKeysResponse
 
     /// See `ClusterManagerClient.listNodePools`.
     func listNodePools(
       request: ListNodePoolsRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleContainerV1.ListNodePoolsResponse
+    ) async throws -> GoogleCloudContainerV1.ListNodePoolsResponse
 
     /// See `ClusterManagerClient.getNodePool`.
     func getNodePool(
       request: GetNodePoolRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleContainerV1.NodePool
+    ) async throws -> GoogleCloudContainerV1.NodePool
 
     /// See `ClusterManagerClient.createNodePool`.
     func createNodePool(
       request: CreateNodePoolRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleContainerV1.Operation
+    ) async throws -> GoogleCloudContainerV1.Operation
 
     /// See `ClusterManagerClient.deleteNodePool`.
     func deleteNodePool(
       request: DeleteNodePoolRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleContainerV1.Operation
+    ) async throws -> GoogleCloudContainerV1.Operation
 
     /// See `ClusterManagerClient.completeNodePoolUpgrade`.
     func completeNodePoolUpgrade(
@@ -994,52 +1002,52 @@ extension Clients {
     /// See `ClusterManagerClient.rollbackNodePoolUpgrade`.
     func rollbackNodePoolUpgrade(
       request: RollbackNodePoolUpgradeRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleContainerV1.Operation
+    ) async throws -> GoogleCloudContainerV1.Operation
 
     /// See `ClusterManagerClient.setNodePoolManagement`.
     func setNodePoolManagement(
       request: SetNodePoolManagementRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleContainerV1.Operation
+    ) async throws -> GoogleCloudContainerV1.Operation
 
     /// See `ClusterManagerClient.setLabels`.
     func setLabels(
       request: SetLabelsRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleContainerV1.Operation
+    ) async throws -> GoogleCloudContainerV1.Operation
 
     /// See `ClusterManagerClient.setLegacyAbac`.
     func setLegacyAbac(
       request: SetLegacyAbacRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleContainerV1.Operation
+    ) async throws -> GoogleCloudContainerV1.Operation
 
     /// See `ClusterManagerClient.startIprotation`.
     func startIprotation(
       request: StartIPRotationRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleContainerV1.Operation
+    ) async throws -> GoogleCloudContainerV1.Operation
 
     /// See `ClusterManagerClient.completeIprotation`.
     func completeIprotation(
       request: CompleteIPRotationRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleContainerV1.Operation
+    ) async throws -> GoogleCloudContainerV1.Operation
 
     /// See `ClusterManagerClient.setNodePoolSize`.
     func setNodePoolSize(
       request: SetNodePoolSizeRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleContainerV1.Operation
+    ) async throws -> GoogleCloudContainerV1.Operation
 
     /// See `ClusterManagerClient.setNetworkPolicy`.
     func setNetworkPolicy(
       request: SetNetworkPolicyRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleContainerV1.Operation
+    ) async throws -> GoogleCloudContainerV1.Operation
 
     /// See `ClusterManagerClient.setMaintenancePolicy`.
     func setMaintenancePolicy(
       request: SetMaintenancePolicyRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleContainerV1.Operation
+    ) async throws -> GoogleCloudContainerV1.Operation
 
     /// See `ClusterManagerClient.listUsableSubnetworks`.
     func listUsableSubnetworks(
       request: ListUsableSubnetworksRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleContainerV1.ListUsableSubnetworksResponse
+    ) async throws -> GoogleCloudContainerV1.ListUsableSubnetworksResponse
 
     /// See `ClusterManagerClient.listUsableSubnetworks`.
     func listUsableSubnetworks(
@@ -1049,38 +1057,38 @@ extension Clients {
     /// See `ClusterManagerClient.checkAutopilotCompatibility`.
     func checkAutopilotCompatibility(
       request: CheckAutopilotCompatibilityRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleContainerV1.CheckAutopilotCompatibilityResponse
+    ) async throws -> GoogleCloudContainerV1.CheckAutopilotCompatibilityResponse
 
     /// See `ClusterManagerClient.fetchClusterUpgradeInfo`.
     func fetchClusterUpgradeInfo(
       request: FetchClusterUpgradeInfoRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleContainerV1.ClusterUpgradeInfo
+    ) async throws -> GoogleCloudContainerV1.ClusterUpgradeInfo
 
     /// See `ClusterManagerClient.fetchNodePoolUpgradeInfo`.
     func fetchNodePoolUpgradeInfo(
       request: FetchNodePoolUpgradeInfoRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleContainerV1.NodePoolUpgradeInfo
+    ) async throws -> GoogleCloudContainerV1.NodePoolUpgradeInfo
   }
 }
 
 // Default implementations
 extension Clients.ClusterManagerProtocol {
   public func listClusters(request: ListClustersRequest) async throws
-    -> GoogleContainerV1.ListClustersResponse
+    -> GoogleCloudContainerV1.ListClustersResponse
   {
     try await self.listClusters(request: request, options: .init())
   }
 
   public func listClusters(
     request: ListClustersRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleContainerV1.ListClustersResponse {
+  ) async throws -> GoogleCloudContainerV1.ListClustersResponse {
     throw GoogleCloudGax.RequestError.unimplemented
   }
 
   public func listClusters(
     projectId: Swift.String,
     zone: Swift.String,
-  ) async throws -> GoogleContainerV1.ListClustersResponse {
+  ) async throws -> GoogleCloudContainerV1.ListClustersResponse {
     let request = ListClustersRequest().with {
       $0.projectId = projectId
       $0.zone = zone
@@ -1090,20 +1098,21 @@ extension Clients.ClusterManagerProtocol {
 
   public func listClusters(
     parent: Swift.String,
-  ) async throws -> GoogleContainerV1.ListClustersResponse {
+  ) async throws -> GoogleCloudContainerV1.ListClustersResponse {
     let request = ListClustersRequest().with {
       $0.parent = parent
     }
     return try await self.listClusters(request: request)
   }
 
-  public func getCluster(request: GetClusterRequest) async throws -> GoogleContainerV1.Cluster {
+  public func getCluster(request: GetClusterRequest) async throws -> GoogleCloudContainerV1.Cluster
+  {
     try await self.getCluster(request: request, options: .init())
   }
 
   public func getCluster(
     request: GetClusterRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleContainerV1.Cluster {
+  ) async throws -> GoogleCloudContainerV1.Cluster {
     throw GoogleCloudGax.RequestError.unimplemented
   }
 
@@ -1111,7 +1120,7 @@ extension Clients.ClusterManagerProtocol {
     projectId: Swift.String,
     zone: Swift.String,
     clusterId: Swift.String,
-  ) async throws -> GoogleContainerV1.Cluster {
+  ) async throws -> GoogleCloudContainerV1.Cluster {
     let request = GetClusterRequest().with {
       $0.projectId = projectId
       $0.zone = zone
@@ -1122,7 +1131,7 @@ extension Clients.ClusterManagerProtocol {
 
   public func getCluster(
     name: Swift.String,
-  ) async throws -> GoogleContainerV1.Cluster {
+  ) async throws -> GoogleCloudContainerV1.Cluster {
     let request = GetClusterRequest().with {
       $0.name = name
     }
@@ -1130,14 +1139,14 @@ extension Clients.ClusterManagerProtocol {
   }
 
   public func createCluster(request: CreateClusterRequest) async throws
-    -> GoogleContainerV1.Operation
+    -> GoogleCloudContainerV1.Operation
   {
     try await self.createCluster(request: request, options: .init())
   }
 
   public func createCluster(
     request: CreateClusterRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleContainerV1.Operation {
+  ) async throws -> GoogleCloudContainerV1.Operation {
     throw GoogleCloudGax.RequestError.unimplemented
   }
 
@@ -1145,7 +1154,7 @@ extension Clients.ClusterManagerProtocol {
     projectId: Swift.String,
     zone: Swift.String,
     cluster: Cluster?,
-  ) async throws -> GoogleContainerV1.Operation {
+  ) async throws -> GoogleCloudContainerV1.Operation {
     let request = CreateClusterRequest().with {
       $0.projectId = projectId
       $0.zone = zone
@@ -1157,7 +1166,7 @@ extension Clients.ClusterManagerProtocol {
   public func createCluster(
     parent: Swift.String,
     cluster: Cluster?,
-  ) async throws -> GoogleContainerV1.Operation {
+  ) async throws -> GoogleCloudContainerV1.Operation {
     let request = CreateClusterRequest().with {
       $0.parent = parent
       $0.cluster = cluster
@@ -1166,14 +1175,14 @@ extension Clients.ClusterManagerProtocol {
   }
 
   public func updateCluster(request: UpdateClusterRequest) async throws
-    -> GoogleContainerV1.Operation
+    -> GoogleCloudContainerV1.Operation
   {
     try await self.updateCluster(request: request, options: .init())
   }
 
   public func updateCluster(
     request: UpdateClusterRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleContainerV1.Operation {
+  ) async throws -> GoogleCloudContainerV1.Operation {
     throw GoogleCloudGax.RequestError.unimplemented
   }
 
@@ -1182,7 +1191,7 @@ extension Clients.ClusterManagerProtocol {
     zone: Swift.String,
     clusterId: Swift.String,
     update: ClusterUpdate?,
-  ) async throws -> GoogleContainerV1.Operation {
+  ) async throws -> GoogleCloudContainerV1.Operation {
     let request = UpdateClusterRequest().with {
       $0.projectId = projectId
       $0.zone = zone
@@ -1195,7 +1204,7 @@ extension Clients.ClusterManagerProtocol {
   public func updateCluster(
     name: Swift.String,
     update: ClusterUpdate?,
-  ) async throws -> GoogleContainerV1.Operation {
+  ) async throws -> GoogleCloudContainerV1.Operation {
     let request = UpdateClusterRequest().with {
       $0.name = name
       $0.update = update
@@ -1204,38 +1213,38 @@ extension Clients.ClusterManagerProtocol {
   }
 
   public func updateNodePool(request: UpdateNodePoolRequest) async throws
-    -> GoogleContainerV1.Operation
+    -> GoogleCloudContainerV1.Operation
   {
     try await self.updateNodePool(request: request, options: .init())
   }
 
   public func updateNodePool(
     request: UpdateNodePoolRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleContainerV1.Operation {
+  ) async throws -> GoogleCloudContainerV1.Operation {
     throw GoogleCloudGax.RequestError.unimplemented
   }
 
   public func setNodePoolAutoscaling(request: SetNodePoolAutoscalingRequest) async throws
-    -> GoogleContainerV1.Operation
+    -> GoogleCloudContainerV1.Operation
   {
     try await self.setNodePoolAutoscaling(request: request, options: .init())
   }
 
   public func setNodePoolAutoscaling(
     request: SetNodePoolAutoscalingRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleContainerV1.Operation {
+  ) async throws -> GoogleCloudContainerV1.Operation {
     throw GoogleCloudGax.RequestError.unimplemented
   }
 
   public func setLoggingService(request: SetLoggingServiceRequest) async throws
-    -> GoogleContainerV1.Operation
+    -> GoogleCloudContainerV1.Operation
   {
     try await self.setLoggingService(request: request, options: .init())
   }
 
   public func setLoggingService(
     request: SetLoggingServiceRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleContainerV1.Operation {
+  ) async throws -> GoogleCloudContainerV1.Operation {
     throw GoogleCloudGax.RequestError.unimplemented
   }
 
@@ -1244,7 +1253,7 @@ extension Clients.ClusterManagerProtocol {
     zone: Swift.String,
     clusterId: Swift.String,
     loggingService: Swift.String,
-  ) async throws -> GoogleContainerV1.Operation {
+  ) async throws -> GoogleCloudContainerV1.Operation {
     let request = SetLoggingServiceRequest().with {
       $0.projectId = projectId
       $0.zone = zone
@@ -1257,7 +1266,7 @@ extension Clients.ClusterManagerProtocol {
   public func setLoggingService(
     name: Swift.String,
     loggingService: Swift.String,
-  ) async throws -> GoogleContainerV1.Operation {
+  ) async throws -> GoogleCloudContainerV1.Operation {
     let request = SetLoggingServiceRequest().with {
       $0.name = name
       $0.loggingService = loggingService
@@ -1266,14 +1275,14 @@ extension Clients.ClusterManagerProtocol {
   }
 
   public func setMonitoringService(request: SetMonitoringServiceRequest) async throws
-    -> GoogleContainerV1.Operation
+    -> GoogleCloudContainerV1.Operation
   {
     try await self.setMonitoringService(request: request, options: .init())
   }
 
   public func setMonitoringService(
     request: SetMonitoringServiceRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleContainerV1.Operation {
+  ) async throws -> GoogleCloudContainerV1.Operation {
     throw GoogleCloudGax.RequestError.unimplemented
   }
 
@@ -1282,7 +1291,7 @@ extension Clients.ClusterManagerProtocol {
     zone: Swift.String,
     clusterId: Swift.String,
     monitoringService: Swift.String,
-  ) async throws -> GoogleContainerV1.Operation {
+  ) async throws -> GoogleCloudContainerV1.Operation {
     let request = SetMonitoringServiceRequest().with {
       $0.projectId = projectId
       $0.zone = zone
@@ -1295,7 +1304,7 @@ extension Clients.ClusterManagerProtocol {
   public func setMonitoringService(
     name: Swift.String,
     monitoringService: Swift.String,
-  ) async throws -> GoogleContainerV1.Operation {
+  ) async throws -> GoogleCloudContainerV1.Operation {
     let request = SetMonitoringServiceRequest().with {
       $0.name = name
       $0.monitoringService = monitoringService
@@ -1304,14 +1313,14 @@ extension Clients.ClusterManagerProtocol {
   }
 
   public func setAddonsConfig(request: SetAddonsConfigRequest) async throws
-    -> GoogleContainerV1.Operation
+    -> GoogleCloudContainerV1.Operation
   {
     try await self.setAddonsConfig(request: request, options: .init())
   }
 
   public func setAddonsConfig(
     request: SetAddonsConfigRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleContainerV1.Operation {
+  ) async throws -> GoogleCloudContainerV1.Operation {
     throw GoogleCloudGax.RequestError.unimplemented
   }
 
@@ -1320,7 +1329,7 @@ extension Clients.ClusterManagerProtocol {
     zone: Swift.String,
     clusterId: Swift.String,
     addonsConfig: AddonsConfig?,
-  ) async throws -> GoogleContainerV1.Operation {
+  ) async throws -> GoogleCloudContainerV1.Operation {
     let request = SetAddonsConfigRequest().with {
       $0.projectId = projectId
       $0.zone = zone
@@ -1333,7 +1342,7 @@ extension Clients.ClusterManagerProtocol {
   public func setAddonsConfig(
     name: Swift.String,
     addonsConfig: AddonsConfig?,
-  ) async throws -> GoogleContainerV1.Operation {
+  ) async throws -> GoogleCloudContainerV1.Operation {
     let request = SetAddonsConfigRequest().with {
       $0.name = name
       $0.addonsConfig = addonsConfig
@@ -1341,14 +1350,15 @@ extension Clients.ClusterManagerProtocol {
     return try await self.setAddonsConfig(request: request)
   }
 
-  public func setLocations(request: SetLocationsRequest) async throws -> GoogleContainerV1.Operation
+  public func setLocations(request: SetLocationsRequest) async throws
+    -> GoogleCloudContainerV1.Operation
   {
     try await self.setLocations(request: request, options: .init())
   }
 
   public func setLocations(
     request: SetLocationsRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleContainerV1.Operation {
+  ) async throws -> GoogleCloudContainerV1.Operation {
     throw GoogleCloudGax.RequestError.unimplemented
   }
 
@@ -1357,7 +1367,7 @@ extension Clients.ClusterManagerProtocol {
     zone: Swift.String,
     clusterId: Swift.String,
     locations: [Swift.String],
-  ) async throws -> GoogleContainerV1.Operation {
+  ) async throws -> GoogleCloudContainerV1.Operation {
     let request = SetLocationsRequest().with {
       $0.projectId = projectId
       $0.zone = zone
@@ -1370,7 +1380,7 @@ extension Clients.ClusterManagerProtocol {
   public func setLocations(
     name: Swift.String,
     locations: [Swift.String],
-  ) async throws -> GoogleContainerV1.Operation {
+  ) async throws -> GoogleCloudContainerV1.Operation {
     let request = SetLocationsRequest().with {
       $0.name = name
       $0.locations = locations
@@ -1378,14 +1388,15 @@ extension Clients.ClusterManagerProtocol {
     return try await self.setLocations(request: request)
   }
 
-  public func updateMaster(request: UpdateMasterRequest) async throws -> GoogleContainerV1.Operation
+  public func updateMaster(request: UpdateMasterRequest) async throws
+    -> GoogleCloudContainerV1.Operation
   {
     try await self.updateMaster(request: request, options: .init())
   }
 
   public func updateMaster(
     request: UpdateMasterRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleContainerV1.Operation {
+  ) async throws -> GoogleCloudContainerV1.Operation {
     throw GoogleCloudGax.RequestError.unimplemented
   }
 
@@ -1394,7 +1405,7 @@ extension Clients.ClusterManagerProtocol {
     zone: Swift.String,
     clusterId: Swift.String,
     masterVersion: Swift.String,
-  ) async throws -> GoogleContainerV1.Operation {
+  ) async throws -> GoogleCloudContainerV1.Operation {
     let request = UpdateMasterRequest().with {
       $0.projectId = projectId
       $0.zone = zone
@@ -1407,7 +1418,7 @@ extension Clients.ClusterManagerProtocol {
   public func updateMaster(
     name: Swift.String,
     masterVersion: Swift.String,
-  ) async throws -> GoogleContainerV1.Operation {
+  ) async throws -> GoogleCloudContainerV1.Operation {
     let request = UpdateMasterRequest().with {
       $0.name = name
       $0.masterVersion = masterVersion
@@ -1416,26 +1427,26 @@ extension Clients.ClusterManagerProtocol {
   }
 
   public func setMasterAuth(request: SetMasterAuthRequest) async throws
-    -> GoogleContainerV1.Operation
+    -> GoogleCloudContainerV1.Operation
   {
     try await self.setMasterAuth(request: request, options: .init())
   }
 
   public func setMasterAuth(
     request: SetMasterAuthRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleContainerV1.Operation {
+  ) async throws -> GoogleCloudContainerV1.Operation {
     throw GoogleCloudGax.RequestError.unimplemented
   }
 
   public func deleteCluster(request: DeleteClusterRequest) async throws
-    -> GoogleContainerV1.Operation
+    -> GoogleCloudContainerV1.Operation
   {
     try await self.deleteCluster(request: request, options: .init())
   }
 
   public func deleteCluster(
     request: DeleteClusterRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleContainerV1.Operation {
+  ) async throws -> GoogleCloudContainerV1.Operation {
     throw GoogleCloudGax.RequestError.unimplemented
   }
 
@@ -1443,7 +1454,7 @@ extension Clients.ClusterManagerProtocol {
     projectId: Swift.String,
     zone: Swift.String,
     clusterId: Swift.String,
-  ) async throws -> GoogleContainerV1.Operation {
+  ) async throws -> GoogleCloudContainerV1.Operation {
     let request = DeleteClusterRequest().with {
       $0.projectId = projectId
       $0.zone = zone
@@ -1454,7 +1465,7 @@ extension Clients.ClusterManagerProtocol {
 
   public func deleteCluster(
     name: Swift.String,
-  ) async throws -> GoogleContainerV1.Operation {
+  ) async throws -> GoogleCloudContainerV1.Operation {
     let request = DeleteClusterRequest().with {
       $0.name = name
     }
@@ -1462,21 +1473,21 @@ extension Clients.ClusterManagerProtocol {
   }
 
   public func listOperations(request: ListOperationsRequest) async throws
-    -> GoogleContainerV1.ListOperationsResponse
+    -> GoogleCloudContainerV1.ListOperationsResponse
   {
     try await self.listOperations(request: request, options: .init())
   }
 
   public func listOperations(
     request: ListOperationsRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleContainerV1.ListOperationsResponse {
+  ) async throws -> GoogleCloudContainerV1.ListOperationsResponse {
     throw GoogleCloudGax.RequestError.unimplemented
   }
 
   public func listOperations(
     projectId: Swift.String,
     zone: Swift.String,
-  ) async throws -> GoogleContainerV1.ListOperationsResponse {
+  ) async throws -> GoogleCloudContainerV1.ListOperationsResponse {
     let request = ListOperationsRequest().with {
       $0.projectId = projectId
       $0.zone = zone
@@ -1486,21 +1497,22 @@ extension Clients.ClusterManagerProtocol {
 
   public func listOperations(
     parent: Swift.String,
-  ) async throws -> GoogleContainerV1.ListOperationsResponse {
+  ) async throws -> GoogleCloudContainerV1.ListOperationsResponse {
     let request = ListOperationsRequest().with {
       $0.parent = parent
     }
     return try await self.listOperations(request: request)
   }
 
-  public func getOperation(request: GetOperationRequest) async throws -> GoogleContainerV1.Operation
+  public func getOperation(request: GetOperationRequest) async throws
+    -> GoogleCloudContainerV1.Operation
   {
     try await self.getOperation(request: request, options: .init())
   }
 
   public func getOperation(
     request: GetOperationRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleContainerV1.Operation {
+  ) async throws -> GoogleCloudContainerV1.Operation {
     throw GoogleCloudGax.RequestError.unimplemented
   }
 
@@ -1508,7 +1520,7 @@ extension Clients.ClusterManagerProtocol {
     projectId: Swift.String,
     zone: Swift.String,
     operationId: Swift.String,
-  ) async throws -> GoogleContainerV1.Operation {
+  ) async throws -> GoogleCloudContainerV1.Operation {
     let request = GetOperationRequest().with {
       $0.projectId = projectId
       $0.zone = zone
@@ -1519,7 +1531,7 @@ extension Clients.ClusterManagerProtocol {
 
   public func getOperation(
     name: Swift.String,
-  ) async throws -> GoogleContainerV1.Operation {
+  ) async throws -> GoogleCloudContainerV1.Operation {
     let request = GetOperationRequest().with {
       $0.name = name
     }
@@ -1559,21 +1571,21 @@ extension Clients.ClusterManagerProtocol {
   }
 
   public func getServerConfig(request: GetServerConfigRequest) async throws
-    -> GoogleContainerV1.ServerConfig
+    -> GoogleCloudContainerV1.ServerConfig
   {
     try await self.getServerConfig(request: request, options: .init())
   }
 
   public func getServerConfig(
     request: GetServerConfigRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleContainerV1.ServerConfig {
+  ) async throws -> GoogleCloudContainerV1.ServerConfig {
     throw GoogleCloudGax.RequestError.unimplemented
   }
 
   public func getServerConfig(
     projectId: Swift.String,
     zone: Swift.String,
-  ) async throws -> GoogleContainerV1.ServerConfig {
+  ) async throws -> GoogleCloudContainerV1.ServerConfig {
     let request = GetServerConfigRequest().with {
       $0.projectId = projectId
       $0.zone = zone
@@ -1583,7 +1595,7 @@ extension Clients.ClusterManagerProtocol {
 
   public func getServerConfig(
     name: Swift.String,
-  ) async throws -> GoogleContainerV1.ServerConfig {
+  ) async throws -> GoogleCloudContainerV1.ServerConfig {
     let request = GetServerConfigRequest().with {
       $0.name = name
     }
@@ -1591,26 +1603,26 @@ extension Clients.ClusterManagerProtocol {
   }
 
   public func getJsonwebKeys(request: GetJSONWebKeysRequest) async throws
-    -> GoogleContainerV1.GetJSONWebKeysResponse
+    -> GoogleCloudContainerV1.GetJSONWebKeysResponse
   {
     try await self.getJsonwebKeys(request: request, options: .init())
   }
 
   public func getJsonwebKeys(
     request: GetJSONWebKeysRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleContainerV1.GetJSONWebKeysResponse {
+  ) async throws -> GoogleCloudContainerV1.GetJSONWebKeysResponse {
     throw GoogleCloudGax.RequestError.unimplemented
   }
 
   public func listNodePools(request: ListNodePoolsRequest) async throws
-    -> GoogleContainerV1.ListNodePoolsResponse
+    -> GoogleCloudContainerV1.ListNodePoolsResponse
   {
     try await self.listNodePools(request: request, options: .init())
   }
 
   public func listNodePools(
     request: ListNodePoolsRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleContainerV1.ListNodePoolsResponse {
+  ) async throws -> GoogleCloudContainerV1.ListNodePoolsResponse {
     throw GoogleCloudGax.RequestError.unimplemented
   }
 
@@ -1618,7 +1630,7 @@ extension Clients.ClusterManagerProtocol {
     projectId: Swift.String,
     zone: Swift.String,
     clusterId: Swift.String,
-  ) async throws -> GoogleContainerV1.ListNodePoolsResponse {
+  ) async throws -> GoogleCloudContainerV1.ListNodePoolsResponse {
     let request = ListNodePoolsRequest().with {
       $0.projectId = projectId
       $0.zone = zone
@@ -1629,20 +1641,22 @@ extension Clients.ClusterManagerProtocol {
 
   public func listNodePools(
     parent: Swift.String,
-  ) async throws -> GoogleContainerV1.ListNodePoolsResponse {
+  ) async throws -> GoogleCloudContainerV1.ListNodePoolsResponse {
     let request = ListNodePoolsRequest().with {
       $0.parent = parent
     }
     return try await self.listNodePools(request: request)
   }
 
-  public func getNodePool(request: GetNodePoolRequest) async throws -> GoogleContainerV1.NodePool {
+  public func getNodePool(request: GetNodePoolRequest) async throws
+    -> GoogleCloudContainerV1.NodePool
+  {
     try await self.getNodePool(request: request, options: .init())
   }
 
   public func getNodePool(
     request: GetNodePoolRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleContainerV1.NodePool {
+  ) async throws -> GoogleCloudContainerV1.NodePool {
     throw GoogleCloudGax.RequestError.unimplemented
   }
 
@@ -1651,7 +1665,7 @@ extension Clients.ClusterManagerProtocol {
     zone: Swift.String,
     clusterId: Swift.String,
     nodePoolId: Swift.String,
-  ) async throws -> GoogleContainerV1.NodePool {
+  ) async throws -> GoogleCloudContainerV1.NodePool {
     let request = GetNodePoolRequest().with {
       $0.projectId = projectId
       $0.zone = zone
@@ -1663,7 +1677,7 @@ extension Clients.ClusterManagerProtocol {
 
   public func getNodePool(
     name: Swift.String,
-  ) async throws -> GoogleContainerV1.NodePool {
+  ) async throws -> GoogleCloudContainerV1.NodePool {
     let request = GetNodePoolRequest().with {
       $0.name = name
     }
@@ -1671,14 +1685,14 @@ extension Clients.ClusterManagerProtocol {
   }
 
   public func createNodePool(request: CreateNodePoolRequest) async throws
-    -> GoogleContainerV1.Operation
+    -> GoogleCloudContainerV1.Operation
   {
     try await self.createNodePool(request: request, options: .init())
   }
 
   public func createNodePool(
     request: CreateNodePoolRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleContainerV1.Operation {
+  ) async throws -> GoogleCloudContainerV1.Operation {
     throw GoogleCloudGax.RequestError.unimplemented
   }
 
@@ -1687,7 +1701,7 @@ extension Clients.ClusterManagerProtocol {
     zone: Swift.String,
     clusterId: Swift.String,
     nodePool: NodePool?,
-  ) async throws -> GoogleContainerV1.Operation {
+  ) async throws -> GoogleCloudContainerV1.Operation {
     let request = CreateNodePoolRequest().with {
       $0.projectId = projectId
       $0.zone = zone
@@ -1700,7 +1714,7 @@ extension Clients.ClusterManagerProtocol {
   public func createNodePool(
     parent: Swift.String,
     nodePool: NodePool?,
-  ) async throws -> GoogleContainerV1.Operation {
+  ) async throws -> GoogleCloudContainerV1.Operation {
     let request = CreateNodePoolRequest().with {
       $0.parent = parent
       $0.nodePool = nodePool
@@ -1709,14 +1723,14 @@ extension Clients.ClusterManagerProtocol {
   }
 
   public func deleteNodePool(request: DeleteNodePoolRequest) async throws
-    -> GoogleContainerV1.Operation
+    -> GoogleCloudContainerV1.Operation
   {
     try await self.deleteNodePool(request: request, options: .init())
   }
 
   public func deleteNodePool(
     request: DeleteNodePoolRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleContainerV1.Operation {
+  ) async throws -> GoogleCloudContainerV1.Operation {
     throw GoogleCloudGax.RequestError.unimplemented
   }
 
@@ -1725,7 +1739,7 @@ extension Clients.ClusterManagerProtocol {
     zone: Swift.String,
     clusterId: Swift.String,
     nodePoolId: Swift.String,
-  ) async throws -> GoogleContainerV1.Operation {
+  ) async throws -> GoogleCloudContainerV1.Operation {
     let request = DeleteNodePoolRequest().with {
       $0.projectId = projectId
       $0.zone = zone
@@ -1737,7 +1751,7 @@ extension Clients.ClusterManagerProtocol {
 
   public func deleteNodePool(
     name: Swift.String,
-  ) async throws -> GoogleContainerV1.Operation {
+  ) async throws -> GoogleCloudContainerV1.Operation {
     let request = DeleteNodePoolRequest().with {
       $0.name = name
     }
@@ -1755,14 +1769,14 @@ extension Clients.ClusterManagerProtocol {
   }
 
   public func rollbackNodePoolUpgrade(request: RollbackNodePoolUpgradeRequest) async throws
-    -> GoogleContainerV1.Operation
+    -> GoogleCloudContainerV1.Operation
   {
     try await self.rollbackNodePoolUpgrade(request: request, options: .init())
   }
 
   public func rollbackNodePoolUpgrade(
     request: RollbackNodePoolUpgradeRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleContainerV1.Operation {
+  ) async throws -> GoogleCloudContainerV1.Operation {
     throw GoogleCloudGax.RequestError.unimplemented
   }
 
@@ -1771,7 +1785,7 @@ extension Clients.ClusterManagerProtocol {
     zone: Swift.String,
     clusterId: Swift.String,
     nodePoolId: Swift.String,
-  ) async throws -> GoogleContainerV1.Operation {
+  ) async throws -> GoogleCloudContainerV1.Operation {
     let request = RollbackNodePoolUpgradeRequest().with {
       $0.projectId = projectId
       $0.zone = zone
@@ -1783,7 +1797,7 @@ extension Clients.ClusterManagerProtocol {
 
   public func rollbackNodePoolUpgrade(
     name: Swift.String,
-  ) async throws -> GoogleContainerV1.Operation {
+  ) async throws -> GoogleCloudContainerV1.Operation {
     let request = RollbackNodePoolUpgradeRequest().with {
       $0.name = name
     }
@@ -1791,36 +1805,37 @@ extension Clients.ClusterManagerProtocol {
   }
 
   public func setNodePoolManagement(request: SetNodePoolManagementRequest) async throws
-    -> GoogleContainerV1.Operation
+    -> GoogleCloudContainerV1.Operation
   {
     try await self.setNodePoolManagement(request: request, options: .init())
   }
 
   public func setNodePoolManagement(
     request: SetNodePoolManagementRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleContainerV1.Operation {
+  ) async throws -> GoogleCloudContainerV1.Operation {
     throw GoogleCloudGax.RequestError.unimplemented
   }
 
-  public func setLabels(request: SetLabelsRequest) async throws -> GoogleContainerV1.Operation {
+  public func setLabels(request: SetLabelsRequest) async throws -> GoogleCloudContainerV1.Operation
+  {
     try await self.setLabels(request: request, options: .init())
   }
 
   public func setLabels(
     request: SetLabelsRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleContainerV1.Operation {
+  ) async throws -> GoogleCloudContainerV1.Operation {
     throw GoogleCloudGax.RequestError.unimplemented
   }
 
   public func setLegacyAbac(request: SetLegacyAbacRequest) async throws
-    -> GoogleContainerV1.Operation
+    -> GoogleCloudContainerV1.Operation
   {
     try await self.setLegacyAbac(request: request, options: .init())
   }
 
   public func setLegacyAbac(
     request: SetLegacyAbacRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleContainerV1.Operation {
+  ) async throws -> GoogleCloudContainerV1.Operation {
     throw GoogleCloudGax.RequestError.unimplemented
   }
 
@@ -1829,7 +1844,7 @@ extension Clients.ClusterManagerProtocol {
     zone: Swift.String,
     clusterId: Swift.String,
     enabled: Swift.Bool,
-  ) async throws -> GoogleContainerV1.Operation {
+  ) async throws -> GoogleCloudContainerV1.Operation {
     let request = SetLegacyAbacRequest().with {
       $0.projectId = projectId
       $0.zone = zone
@@ -1842,7 +1857,7 @@ extension Clients.ClusterManagerProtocol {
   public func setLegacyAbac(
     name: Swift.String,
     enabled: Swift.Bool,
-  ) async throws -> GoogleContainerV1.Operation {
+  ) async throws -> GoogleCloudContainerV1.Operation {
     let request = SetLegacyAbacRequest().with {
       $0.name = name
       $0.enabled = enabled
@@ -1851,14 +1866,14 @@ extension Clients.ClusterManagerProtocol {
   }
 
   public func startIprotation(request: StartIPRotationRequest) async throws
-    -> GoogleContainerV1.Operation
+    -> GoogleCloudContainerV1.Operation
   {
     try await self.startIprotation(request: request, options: .init())
   }
 
   public func startIprotation(
     request: StartIPRotationRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleContainerV1.Operation {
+  ) async throws -> GoogleCloudContainerV1.Operation {
     throw GoogleCloudGax.RequestError.unimplemented
   }
 
@@ -1866,7 +1881,7 @@ extension Clients.ClusterManagerProtocol {
     projectId: Swift.String,
     zone: Swift.String,
     clusterId: Swift.String,
-  ) async throws -> GoogleContainerV1.Operation {
+  ) async throws -> GoogleCloudContainerV1.Operation {
     let request = StartIPRotationRequest().with {
       $0.projectId = projectId
       $0.zone = zone
@@ -1877,7 +1892,7 @@ extension Clients.ClusterManagerProtocol {
 
   public func startIprotation(
     name: Swift.String,
-  ) async throws -> GoogleContainerV1.Operation {
+  ) async throws -> GoogleCloudContainerV1.Operation {
     let request = StartIPRotationRequest().with {
       $0.name = name
     }
@@ -1885,14 +1900,14 @@ extension Clients.ClusterManagerProtocol {
   }
 
   public func completeIprotation(request: CompleteIPRotationRequest) async throws
-    -> GoogleContainerV1.Operation
+    -> GoogleCloudContainerV1.Operation
   {
     try await self.completeIprotation(request: request, options: .init())
   }
 
   public func completeIprotation(
     request: CompleteIPRotationRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleContainerV1.Operation {
+  ) async throws -> GoogleCloudContainerV1.Operation {
     throw GoogleCloudGax.RequestError.unimplemented
   }
 
@@ -1900,7 +1915,7 @@ extension Clients.ClusterManagerProtocol {
     projectId: Swift.String,
     zone: Swift.String,
     clusterId: Swift.String,
-  ) async throws -> GoogleContainerV1.Operation {
+  ) async throws -> GoogleCloudContainerV1.Operation {
     let request = CompleteIPRotationRequest().with {
       $0.projectId = projectId
       $0.zone = zone
@@ -1911,7 +1926,7 @@ extension Clients.ClusterManagerProtocol {
 
   public func completeIprotation(
     name: Swift.String,
-  ) async throws -> GoogleContainerV1.Operation {
+  ) async throws -> GoogleCloudContainerV1.Operation {
     let request = CompleteIPRotationRequest().with {
       $0.name = name
     }
@@ -1919,26 +1934,26 @@ extension Clients.ClusterManagerProtocol {
   }
 
   public func setNodePoolSize(request: SetNodePoolSizeRequest) async throws
-    -> GoogleContainerV1.Operation
+    -> GoogleCloudContainerV1.Operation
   {
     try await self.setNodePoolSize(request: request, options: .init())
   }
 
   public func setNodePoolSize(
     request: SetNodePoolSizeRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleContainerV1.Operation {
+  ) async throws -> GoogleCloudContainerV1.Operation {
     throw GoogleCloudGax.RequestError.unimplemented
   }
 
   public func setNetworkPolicy(request: SetNetworkPolicyRequest) async throws
-    -> GoogleContainerV1.Operation
+    -> GoogleCloudContainerV1.Operation
   {
     try await self.setNetworkPolicy(request: request, options: .init())
   }
 
   public func setNetworkPolicy(
     request: SetNetworkPolicyRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleContainerV1.Operation {
+  ) async throws -> GoogleCloudContainerV1.Operation {
     throw GoogleCloudGax.RequestError.unimplemented
   }
 
@@ -1947,7 +1962,7 @@ extension Clients.ClusterManagerProtocol {
     zone: Swift.String,
     clusterId: Swift.String,
     networkPolicy: NetworkPolicy?,
-  ) async throws -> GoogleContainerV1.Operation {
+  ) async throws -> GoogleCloudContainerV1.Operation {
     let request = SetNetworkPolicyRequest().with {
       $0.projectId = projectId
       $0.zone = zone
@@ -1960,7 +1975,7 @@ extension Clients.ClusterManagerProtocol {
   public func setNetworkPolicy(
     name: Swift.String,
     networkPolicy: NetworkPolicy?,
-  ) async throws -> GoogleContainerV1.Operation {
+  ) async throws -> GoogleCloudContainerV1.Operation {
     let request = SetNetworkPolicyRequest().with {
       $0.name = name
       $0.networkPolicy = networkPolicy
@@ -1969,14 +1984,14 @@ extension Clients.ClusterManagerProtocol {
   }
 
   public func setMaintenancePolicy(request: SetMaintenancePolicyRequest) async throws
-    -> GoogleContainerV1.Operation
+    -> GoogleCloudContainerV1.Operation
   {
     try await self.setMaintenancePolicy(request: request, options: .init())
   }
 
   public func setMaintenancePolicy(
     request: SetMaintenancePolicyRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleContainerV1.Operation {
+  ) async throws -> GoogleCloudContainerV1.Operation {
     throw GoogleCloudGax.RequestError.unimplemented
   }
 
@@ -1985,7 +2000,7 @@ extension Clients.ClusterManagerProtocol {
     zone: Swift.String,
     clusterId: Swift.String,
     maintenancePolicy: MaintenancePolicy?,
-  ) async throws -> GoogleContainerV1.Operation {
+  ) async throws -> GoogleCloudContainerV1.Operation {
     let request = SetMaintenancePolicyRequest().with {
       $0.projectId = projectId
       $0.zone = zone
@@ -1998,7 +2013,7 @@ extension Clients.ClusterManagerProtocol {
   public func setMaintenancePolicy(
     name: Swift.String,
     maintenancePolicy: MaintenancePolicy?,
-  ) async throws -> GoogleContainerV1.Operation {
+  ) async throws -> GoogleCloudContainerV1.Operation {
     let request = SetMaintenancePolicyRequest().with {
       $0.name = name
       $0.maintenancePolicy = maintenancePolicy
@@ -2007,14 +2022,14 @@ extension Clients.ClusterManagerProtocol {
   }
 
   public func listUsableSubnetworks(request: ListUsableSubnetworksRequest) async throws
-    -> GoogleContainerV1.ListUsableSubnetworksResponse
+    -> GoogleCloudContainerV1.ListUsableSubnetworksResponse
   {
     try await self.listUsableSubnetworks(request: request, options: .init())
   }
 
   public func listUsableSubnetworks(
     request: ListUsableSubnetworksRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleContainerV1.ListUsableSubnetworksResponse {
+  ) async throws -> GoogleCloudContainerV1.ListUsableSubnetworksResponse {
     throw GoogleCloudGax.RequestError.unimplemented
   }
 
@@ -2028,39 +2043,39 @@ extension Clients.ClusterManagerProtocol {
     byItem: ListUsableSubnetworksRequest, options: GoogleCloudGax.RequestOptions
   ) throws -> any AsyncSequence<UsableSubnetwork, Swift.Error> {
     let listRpc = {
-      (token: Swift.String) async throws -> GoogleContainerV1.ListUsableSubnetworksResponse in
+      (token: Swift.String) async throws -> GoogleCloudContainerV1.ListUsableSubnetworksResponse in
       throw GoogleCloudGax.RequestError.unimplemented
     }
     return GoogleCloudGax.PaginatedResponseSequence(listRpc: listRpc)
   }
 
   public func checkAutopilotCompatibility(request: CheckAutopilotCompatibilityRequest) async throws
-    -> GoogleContainerV1.CheckAutopilotCompatibilityResponse
+    -> GoogleCloudContainerV1.CheckAutopilotCompatibilityResponse
   {
     try await self.checkAutopilotCompatibility(request: request, options: .init())
   }
 
   public func checkAutopilotCompatibility(
     request: CheckAutopilotCompatibilityRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleContainerV1.CheckAutopilotCompatibilityResponse {
+  ) async throws -> GoogleCloudContainerV1.CheckAutopilotCompatibilityResponse {
     throw GoogleCloudGax.RequestError.unimplemented
   }
 
   public func fetchClusterUpgradeInfo(request: FetchClusterUpgradeInfoRequest) async throws
-    -> GoogleContainerV1.ClusterUpgradeInfo
+    -> GoogleCloudContainerV1.ClusterUpgradeInfo
   {
     try await self.fetchClusterUpgradeInfo(request: request, options: .init())
   }
 
   public func fetchClusterUpgradeInfo(
     request: FetchClusterUpgradeInfoRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleContainerV1.ClusterUpgradeInfo {
+  ) async throws -> GoogleCloudContainerV1.ClusterUpgradeInfo {
     throw GoogleCloudGax.RequestError.unimplemented
   }
 
   public func fetchClusterUpgradeInfo(
     name: Swift.String,
-  ) async throws -> GoogleContainerV1.ClusterUpgradeInfo {
+  ) async throws -> GoogleCloudContainerV1.ClusterUpgradeInfo {
     let request = FetchClusterUpgradeInfoRequest().with {
       $0.name = name
     }
@@ -2068,20 +2083,20 @@ extension Clients.ClusterManagerProtocol {
   }
 
   public func fetchNodePoolUpgradeInfo(request: FetchNodePoolUpgradeInfoRequest) async throws
-    -> GoogleContainerV1.NodePoolUpgradeInfo
+    -> GoogleCloudContainerV1.NodePoolUpgradeInfo
   {
     try await self.fetchNodePoolUpgradeInfo(request: request, options: .init())
   }
 
   public func fetchNodePoolUpgradeInfo(
     request: FetchNodePoolUpgradeInfoRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleContainerV1.NodePoolUpgradeInfo {
+  ) async throws -> GoogleCloudContainerV1.NodePoolUpgradeInfo {
     throw GoogleCloudGax.RequestError.unimplemented
   }
 
   public func fetchNodePoolUpgradeInfo(
     name: Swift.String,
-  ) async throws -> GoogleContainerV1.NodePoolUpgradeInfo {
+  ) async throws -> GoogleCloudContainerV1.NodePoolUpgradeInfo {
     let request = FetchNodePoolUpgradeInfoRequest().with {
       $0.name = name
     }

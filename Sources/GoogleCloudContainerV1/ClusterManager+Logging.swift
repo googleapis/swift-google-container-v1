@@ -58,14 +58,14 @@ extension Clients {
 
     public func listClusters(
       request: ListClustersRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleContainerV1.ListClustersResponse {
+    ) async throws -> GoogleCloudContainerV1.ListClustersResponse {
       try await self._intercept(
         request: request,
         options: options,
         name: "listClusters",
         action: {
           (r: ListClustersRequest, o: GoogleCloudGax.RequestOptions) async throws
-            -> GoogleContainerV1.ListClustersResponse
+            -> GoogleCloudContainerV1.ListClustersResponse
           in
           return try await self.inner.listClusters(request: r, options: o)
         })
@@ -73,14 +73,14 @@ extension Clients {
 
     public func getCluster(
       request: GetClusterRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleContainerV1.Cluster {
+    ) async throws -> GoogleCloudContainerV1.Cluster {
       try await self._intercept(
         request: request,
         options: options,
         name: "getCluster",
         action: {
           (r: GetClusterRequest, o: GoogleCloudGax.RequestOptions) async throws
-            -> GoogleContainerV1.Cluster
+            -> GoogleCloudContainerV1.Cluster
           in
           return try await self.inner.getCluster(request: r, options: o)
         })
@@ -88,14 +88,14 @@ extension Clients {
 
     public func createCluster(
       request: CreateClusterRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleContainerV1.Operation {
+    ) async throws -> GoogleCloudContainerV1.Operation {
       try await self._intercept(
         request: request,
         options: options,
         name: "createCluster",
         action: {
           (r: CreateClusterRequest, o: GoogleCloudGax.RequestOptions) async throws
-            -> GoogleContainerV1.Operation
+            -> GoogleCloudContainerV1.Operation
           in
           return try await self.inner.createCluster(request: r, options: o)
         })
@@ -103,14 +103,14 @@ extension Clients {
 
     public func updateCluster(
       request: UpdateClusterRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleContainerV1.Operation {
+    ) async throws -> GoogleCloudContainerV1.Operation {
       try await self._intercept(
         request: request,
         options: options,
         name: "updateCluster",
         action: {
           (r: UpdateClusterRequest, o: GoogleCloudGax.RequestOptions) async throws
-            -> GoogleContainerV1.Operation
+            -> GoogleCloudContainerV1.Operation
           in
           return try await self.inner.updateCluster(request: r, options: o)
         })
@@ -118,14 +118,14 @@ extension Clients {
 
     public func updateNodePool(
       request: UpdateNodePoolRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleContainerV1.Operation {
+    ) async throws -> GoogleCloudContainerV1.Operation {
       try await self._intercept(
         request: request,
         options: options,
         name: "updateNodePool",
         action: {
           (r: UpdateNodePoolRequest, o: GoogleCloudGax.RequestOptions) async throws
-            -> GoogleContainerV1.Operation
+            -> GoogleCloudContainerV1.Operation
           in
           return try await self.inner.updateNodePool(request: r, options: o)
         })
@@ -133,14 +133,14 @@ extension Clients {
 
     public func setNodePoolAutoscaling(
       request: SetNodePoolAutoscalingRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleContainerV1.Operation {
+    ) async throws -> GoogleCloudContainerV1.Operation {
       try await self._intercept(
         request: request,
         options: options,
         name: "setNodePoolAutoscaling",
         action: {
           (r: SetNodePoolAutoscalingRequest, o: GoogleCloudGax.RequestOptions) async throws
-            -> GoogleContainerV1.Operation
+            -> GoogleCloudContainerV1.Operation
           in
           return try await self.inner.setNodePoolAutoscaling(request: r, options: o)
         })
@@ -148,14 +148,14 @@ extension Clients {
 
     public func setLoggingService(
       request: SetLoggingServiceRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleContainerV1.Operation {
+    ) async throws -> GoogleCloudContainerV1.Operation {
       try await self._intercept(
         request: request,
         options: options,
         name: "setLoggingService",
         action: {
           (r: SetLoggingServiceRequest, o: GoogleCloudGax.RequestOptions) async throws
-            -> GoogleContainerV1.Operation
+            -> GoogleCloudContainerV1.Operation
           in
           return try await self.inner.setLoggingService(request: r, options: o)
         })
@@ -163,14 +163,14 @@ extension Clients {
 
     public func setMonitoringService(
       request: SetMonitoringServiceRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleContainerV1.Operation {
+    ) async throws -> GoogleCloudContainerV1.Operation {
       try await self._intercept(
         request: request,
         options: options,
         name: "setMonitoringService",
         action: {
           (r: SetMonitoringServiceRequest, o: GoogleCloudGax.RequestOptions) async throws
-            -> GoogleContainerV1.Operation
+            -> GoogleCloudContainerV1.Operation
           in
           return try await self.inner.setMonitoringService(request: r, options: o)
         })
@@ -178,14 +178,14 @@ extension Clients {
 
     public func setAddonsConfig(
       request: SetAddonsConfigRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleContainerV1.Operation {
+    ) async throws -> GoogleCloudContainerV1.Operation {
       try await self._intercept(
         request: request,
         options: options,
         name: "setAddonsConfig",
         action: {
           (r: SetAddonsConfigRequest, o: GoogleCloudGax.RequestOptions) async throws
-            -> GoogleContainerV1.Operation
+            -> GoogleCloudContainerV1.Operation
           in
           return try await self.inner.setAddonsConfig(request: r, options: o)
         })
@@ -193,14 +193,14 @@ extension Clients {
 
     public func setLocations(
       request: SetLocationsRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleContainerV1.Operation {
+    ) async throws -> GoogleCloudContainerV1.Operation {
       try await self._intercept(
         request: request,
         options: options,
         name: "setLocations",
         action: {
           (r: SetLocationsRequest, o: GoogleCloudGax.RequestOptions) async throws
-            -> GoogleContainerV1.Operation
+            -> GoogleCloudContainerV1.Operation
           in
           return try await self.inner.setLocations(request: r, options: o)
         })
@@ -208,14 +208,14 @@ extension Clients {
 
     public func updateMaster(
       request: UpdateMasterRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleContainerV1.Operation {
+    ) async throws -> GoogleCloudContainerV1.Operation {
       try await self._intercept(
         request: request,
         options: options,
         name: "updateMaster",
         action: {
           (r: UpdateMasterRequest, o: GoogleCloudGax.RequestOptions) async throws
-            -> GoogleContainerV1.Operation
+            -> GoogleCloudContainerV1.Operation
           in
           return try await self.inner.updateMaster(request: r, options: o)
         })
@@ -223,14 +223,14 @@ extension Clients {
 
     public func setMasterAuth(
       request: SetMasterAuthRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleContainerV1.Operation {
+    ) async throws -> GoogleCloudContainerV1.Operation {
       try await self._intercept(
         request: request,
         options: options,
         name: "setMasterAuth",
         action: {
           (r: SetMasterAuthRequest, o: GoogleCloudGax.RequestOptions) async throws
-            -> GoogleContainerV1.Operation
+            -> GoogleCloudContainerV1.Operation
           in
           return try await self.inner.setMasterAuth(request: r, options: o)
         })
@@ -238,14 +238,14 @@ extension Clients {
 
     public func deleteCluster(
       request: DeleteClusterRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleContainerV1.Operation {
+    ) async throws -> GoogleCloudContainerV1.Operation {
       try await self._intercept(
         request: request,
         options: options,
         name: "deleteCluster",
         action: {
           (r: DeleteClusterRequest, o: GoogleCloudGax.RequestOptions) async throws
-            -> GoogleContainerV1.Operation
+            -> GoogleCloudContainerV1.Operation
           in
           return try await self.inner.deleteCluster(request: r, options: o)
         })
@@ -253,14 +253,14 @@ extension Clients {
 
     public func listOperations(
       request: ListOperationsRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleContainerV1.ListOperationsResponse {
+    ) async throws -> GoogleCloudContainerV1.ListOperationsResponse {
       try await self._intercept(
         request: request,
         options: options,
         name: "listOperations",
         action: {
           (r: ListOperationsRequest, o: GoogleCloudGax.RequestOptions) async throws
-            -> GoogleContainerV1.ListOperationsResponse
+            -> GoogleCloudContainerV1.ListOperationsResponse
           in
           return try await self.inner.listOperations(request: r, options: o)
         })
@@ -268,14 +268,14 @@ extension Clients {
 
     public func getOperation(
       request: GetOperationRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleContainerV1.Operation {
+    ) async throws -> GoogleCloudContainerV1.Operation {
       try await self._intercept(
         request: request,
         options: options,
         name: "getOperation",
         action: {
           (r: GetOperationRequest, o: GoogleCloudGax.RequestOptions) async throws
-            -> GoogleContainerV1.Operation
+            -> GoogleCloudContainerV1.Operation
           in
           return try await self.inner.getOperation(request: r, options: o)
         })
@@ -296,14 +296,14 @@ extension Clients {
 
     public func getServerConfig(
       request: GetServerConfigRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleContainerV1.ServerConfig {
+    ) async throws -> GoogleCloudContainerV1.ServerConfig {
       try await self._intercept(
         request: request,
         options: options,
         name: "getServerConfig",
         action: {
           (r: GetServerConfigRequest, o: GoogleCloudGax.RequestOptions) async throws
-            -> GoogleContainerV1.ServerConfig
+            -> GoogleCloudContainerV1.ServerConfig
           in
           return try await self.inner.getServerConfig(request: r, options: o)
         })
@@ -311,14 +311,14 @@ extension Clients {
 
     public func getJsonwebKeys(
       request: GetJSONWebKeysRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleContainerV1.GetJSONWebKeysResponse {
+    ) async throws -> GoogleCloudContainerV1.GetJSONWebKeysResponse {
       try await self._intercept(
         request: request,
         options: options,
         name: "getJsonwebKeys",
         action: {
           (r: GetJSONWebKeysRequest, o: GoogleCloudGax.RequestOptions) async throws
-            -> GoogleContainerV1.GetJSONWebKeysResponse
+            -> GoogleCloudContainerV1.GetJSONWebKeysResponse
           in
           return try await self.inner.getJsonwebKeys(request: r, options: o)
         })
@@ -326,14 +326,14 @@ extension Clients {
 
     public func listNodePools(
       request: ListNodePoolsRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleContainerV1.ListNodePoolsResponse {
+    ) async throws -> GoogleCloudContainerV1.ListNodePoolsResponse {
       try await self._intercept(
         request: request,
         options: options,
         name: "listNodePools",
         action: {
           (r: ListNodePoolsRequest, o: GoogleCloudGax.RequestOptions) async throws
-            -> GoogleContainerV1.ListNodePoolsResponse
+            -> GoogleCloudContainerV1.ListNodePoolsResponse
           in
           return try await self.inner.listNodePools(request: r, options: o)
         })
@@ -341,14 +341,14 @@ extension Clients {
 
     public func getNodePool(
       request: GetNodePoolRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleContainerV1.NodePool {
+    ) async throws -> GoogleCloudContainerV1.NodePool {
       try await self._intercept(
         request: request,
         options: options,
         name: "getNodePool",
         action: {
           (r: GetNodePoolRequest, o: GoogleCloudGax.RequestOptions) async throws
-            -> GoogleContainerV1.NodePool
+            -> GoogleCloudContainerV1.NodePool
           in
           return try await self.inner.getNodePool(request: r, options: o)
         })
@@ -356,14 +356,14 @@ extension Clients {
 
     public func createNodePool(
       request: CreateNodePoolRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleContainerV1.Operation {
+    ) async throws -> GoogleCloudContainerV1.Operation {
       try await self._intercept(
         request: request,
         options: options,
         name: "createNodePool",
         action: {
           (r: CreateNodePoolRequest, o: GoogleCloudGax.RequestOptions) async throws
-            -> GoogleContainerV1.Operation
+            -> GoogleCloudContainerV1.Operation
           in
           return try await self.inner.createNodePool(request: r, options: o)
         })
@@ -371,14 +371,14 @@ extension Clients {
 
     public func deleteNodePool(
       request: DeleteNodePoolRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleContainerV1.Operation {
+    ) async throws -> GoogleCloudContainerV1.Operation {
       try await self._intercept(
         request: request,
         options: options,
         name: "deleteNodePool",
         action: {
           (r: DeleteNodePoolRequest, o: GoogleCloudGax.RequestOptions) async throws
-            -> GoogleContainerV1.Operation
+            -> GoogleCloudContainerV1.Operation
           in
           return try await self.inner.deleteNodePool(request: r, options: o)
         })
@@ -400,14 +400,14 @@ extension Clients {
 
     public func rollbackNodePoolUpgrade(
       request: RollbackNodePoolUpgradeRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleContainerV1.Operation {
+    ) async throws -> GoogleCloudContainerV1.Operation {
       try await self._intercept(
         request: request,
         options: options,
         name: "rollbackNodePoolUpgrade",
         action: {
           (r: RollbackNodePoolUpgradeRequest, o: GoogleCloudGax.RequestOptions) async throws
-            -> GoogleContainerV1.Operation
+            -> GoogleCloudContainerV1.Operation
           in
           return try await self.inner.rollbackNodePoolUpgrade(request: r, options: o)
         })
@@ -415,14 +415,14 @@ extension Clients {
 
     public func setNodePoolManagement(
       request: SetNodePoolManagementRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleContainerV1.Operation {
+    ) async throws -> GoogleCloudContainerV1.Operation {
       try await self._intercept(
         request: request,
         options: options,
         name: "setNodePoolManagement",
         action: {
           (r: SetNodePoolManagementRequest, o: GoogleCloudGax.RequestOptions) async throws
-            -> GoogleContainerV1.Operation
+            -> GoogleCloudContainerV1.Operation
           in
           return try await self.inner.setNodePoolManagement(request: r, options: o)
         })
@@ -430,14 +430,14 @@ extension Clients {
 
     public func setLabels(
       request: SetLabelsRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleContainerV1.Operation {
+    ) async throws -> GoogleCloudContainerV1.Operation {
       try await self._intercept(
         request: request,
         options: options,
         name: "setLabels",
         action: {
           (r: SetLabelsRequest, o: GoogleCloudGax.RequestOptions) async throws
-            -> GoogleContainerV1.Operation
+            -> GoogleCloudContainerV1.Operation
           in
           return try await self.inner.setLabels(request: r, options: o)
         })
@@ -445,14 +445,14 @@ extension Clients {
 
     public func setLegacyAbac(
       request: SetLegacyAbacRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleContainerV1.Operation {
+    ) async throws -> GoogleCloudContainerV1.Operation {
       try await self._intercept(
         request: request,
         options: options,
         name: "setLegacyAbac",
         action: {
           (r: SetLegacyAbacRequest, o: GoogleCloudGax.RequestOptions) async throws
-            -> GoogleContainerV1.Operation
+            -> GoogleCloudContainerV1.Operation
           in
           return try await self.inner.setLegacyAbac(request: r, options: o)
         })
@@ -460,14 +460,14 @@ extension Clients {
 
     public func startIprotation(
       request: StartIPRotationRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleContainerV1.Operation {
+    ) async throws -> GoogleCloudContainerV1.Operation {
       try await self._intercept(
         request: request,
         options: options,
         name: "startIprotation",
         action: {
           (r: StartIPRotationRequest, o: GoogleCloudGax.RequestOptions) async throws
-            -> GoogleContainerV1.Operation
+            -> GoogleCloudContainerV1.Operation
           in
           return try await self.inner.startIprotation(request: r, options: o)
         })
@@ -475,14 +475,14 @@ extension Clients {
 
     public func completeIprotation(
       request: CompleteIPRotationRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleContainerV1.Operation {
+    ) async throws -> GoogleCloudContainerV1.Operation {
       try await self._intercept(
         request: request,
         options: options,
         name: "completeIprotation",
         action: {
           (r: CompleteIPRotationRequest, o: GoogleCloudGax.RequestOptions) async throws
-            -> GoogleContainerV1.Operation
+            -> GoogleCloudContainerV1.Operation
           in
           return try await self.inner.completeIprotation(request: r, options: o)
         })
@@ -490,14 +490,14 @@ extension Clients {
 
     public func setNodePoolSize(
       request: SetNodePoolSizeRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleContainerV1.Operation {
+    ) async throws -> GoogleCloudContainerV1.Operation {
       try await self._intercept(
         request: request,
         options: options,
         name: "setNodePoolSize",
         action: {
           (r: SetNodePoolSizeRequest, o: GoogleCloudGax.RequestOptions) async throws
-            -> GoogleContainerV1.Operation
+            -> GoogleCloudContainerV1.Operation
           in
           return try await self.inner.setNodePoolSize(request: r, options: o)
         })
@@ -505,14 +505,14 @@ extension Clients {
 
     public func setNetworkPolicy(
       request: SetNetworkPolicyRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleContainerV1.Operation {
+    ) async throws -> GoogleCloudContainerV1.Operation {
       try await self._intercept(
         request: request,
         options: options,
         name: "setNetworkPolicy",
         action: {
           (r: SetNetworkPolicyRequest, o: GoogleCloudGax.RequestOptions) async throws
-            -> GoogleContainerV1.Operation
+            -> GoogleCloudContainerV1.Operation
           in
           return try await self.inner.setNetworkPolicy(request: r, options: o)
         })
@@ -520,14 +520,14 @@ extension Clients {
 
     public func setMaintenancePolicy(
       request: SetMaintenancePolicyRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleContainerV1.Operation {
+    ) async throws -> GoogleCloudContainerV1.Operation {
       try await self._intercept(
         request: request,
         options: options,
         name: "setMaintenancePolicy",
         action: {
           (r: SetMaintenancePolicyRequest, o: GoogleCloudGax.RequestOptions) async throws
-            -> GoogleContainerV1.Operation
+            -> GoogleCloudContainerV1.Operation
           in
           return try await self.inner.setMaintenancePolicy(request: r, options: o)
         })
@@ -535,14 +535,14 @@ extension Clients {
 
     public func listUsableSubnetworks(
       request: ListUsableSubnetworksRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleContainerV1.ListUsableSubnetworksResponse {
+    ) async throws -> GoogleCloudContainerV1.ListUsableSubnetworksResponse {
       try await self._intercept(
         request: request,
         options: options,
         name: "listUsableSubnetworks",
         action: {
           (r: ListUsableSubnetworksRequest, o: GoogleCloudGax.RequestOptions) async throws
-            -> GoogleContainerV1.ListUsableSubnetworksResponse
+            -> GoogleCloudContainerV1.ListUsableSubnetworksResponse
           in
           return try await self.inner.listUsableSubnetworks(request: r, options: o)
         })
@@ -550,14 +550,14 @@ extension Clients {
 
     public func checkAutopilotCompatibility(
       request: CheckAutopilotCompatibilityRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleContainerV1.CheckAutopilotCompatibilityResponse {
+    ) async throws -> GoogleCloudContainerV1.CheckAutopilotCompatibilityResponse {
       try await self._intercept(
         request: request,
         options: options,
         name: "checkAutopilotCompatibility",
         action: {
           (r: CheckAutopilotCompatibilityRequest, o: GoogleCloudGax.RequestOptions) async throws
-            -> GoogleContainerV1.CheckAutopilotCompatibilityResponse
+            -> GoogleCloudContainerV1.CheckAutopilotCompatibilityResponse
           in
           return try await self.inner.checkAutopilotCompatibility(request: r, options: o)
         })
@@ -565,14 +565,14 @@ extension Clients {
 
     public func fetchClusterUpgradeInfo(
       request: FetchClusterUpgradeInfoRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleContainerV1.ClusterUpgradeInfo {
+    ) async throws -> GoogleCloudContainerV1.ClusterUpgradeInfo {
       try await self._intercept(
         request: request,
         options: options,
         name: "fetchClusterUpgradeInfo",
         action: {
           (r: FetchClusterUpgradeInfoRequest, o: GoogleCloudGax.RequestOptions) async throws
-            -> GoogleContainerV1.ClusterUpgradeInfo
+            -> GoogleCloudContainerV1.ClusterUpgradeInfo
           in
           return try await self.inner.fetchClusterUpgradeInfo(request: r, options: o)
         })
@@ -580,14 +580,14 @@ extension Clients {
 
     public func fetchNodePoolUpgradeInfo(
       request: FetchNodePoolUpgradeInfoRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleContainerV1.NodePoolUpgradeInfo {
+    ) async throws -> GoogleCloudContainerV1.NodePoolUpgradeInfo {
       try await self._intercept(
         request: request,
         options: options,
         name: "fetchNodePoolUpgradeInfo",
         action: {
           (r: FetchNodePoolUpgradeInfoRequest, o: GoogleCloudGax.RequestOptions) async throws
-            -> GoogleContainerV1.NodePoolUpgradeInfo
+            -> GoogleCloudContainerV1.NodePoolUpgradeInfo
           in
           return try await self.inner.fetchNodePoolUpgradeInfo(request: r, options: o)
         })
