@@ -17,14 +17,22 @@
 import Foundation
 @_spi(GoogleCloudInternal) import GoogleCloudWKT
 
-/// LoggingComponentConfig is cluster logging component configuration.
-public struct LoggingComponentConfig: Codable, Equatable, GoogleCloudWKT._AnyPackable,
+/// RollbackSafeUpgradeStatus contains the rollback-safe upgrade status of a
+/// cluster.
+public struct RollbackSafeUpgradeStatus: Codable, Equatable, GoogleCloudWKT._AnyPackable,
   Sendable
 {
-  /// Select components to collect logs. An empty set would disable all logging.
-  public var enableComponents: [LoggingComponentConfig.Component] = []
+  /// Output only. The mode of the rollback-safe upgrade.
+  public var mode: RollbackSafeUpgradeStatus.Mode = RollbackSafeUpgradeStatus.Mode()
 
-  /// Initialize a new instance of `LoggingComponentConfig`.
+  /// Output only. The rollback-safe mode expiration time.
+  public var controlPlaneUpgradeRollbackEndTime: GoogleCloudWKT.Timestamp? = nil
+
+  /// Output only. The GKE version that the cluster previously used before
+  /// step-one upgrade.
+  public var previousVersion: Swift.String = Swift.String()
+
+  /// Initialize a new instance of `RollbackSafeUpgradeStatus`.
   public init() {}
 
   /// Use `config` to return a new instance of this object, with some fields updated.
@@ -32,7 +40,7 @@ public struct LoggingComponentConfig: Codable, Equatable, GoogleCloudWKT._AnyPac
   /// Commonly used to initialize the value, for example:
   ///
   /// ```
-  /// let value = LoggingComponentConfig().with { $0.enableComponents = ... }
+  /// let value = RollbackSafeUpgradeStatus().with { $0.mode = ... }
   /// ```
   public func with(_ config: (inout Self) throws -> Swift.Void) rethrows -> Self {
     var copy = self
@@ -40,28 +48,13 @@ public struct LoggingComponentConfig: Codable, Equatable, GoogleCloudWKT._AnyPac
     return copy
   }
 
-  /// GKE components exposing logs
-  public enum Component: Codable, Equatable, Sendable {
-    /// Default value. This shouldn't be used.
+  /// Mode indicates the mode of the rollback-safe upgrade.
+  public enum Mode: Codable, Equatable, Sendable {
+    /// MODE_UNSPECIFIED means it's in regular upgrade mode.
     case unspecified
-    /// system components
-    case systemComponents
-    /// workloads
-    case workloads
-    /// kube-apiserver
-    case apiserver
-    /// kube-scheduler
-    case scheduler
-    /// kube-controller-manager
-    case controllerManager
-    /// kcp-sshd
-    case kcpSshd
-    /// kcp connection logs
-    case kcpConnection
-    /// horizontal pod autoscaler decision logs
-    case kcpHpa
-    /// vertical pod autoscaler decision logs
-    case kcpVpa
+    /// KCP_MINOR_UPGRADE_ROLLBACK_SAFE_MODE means it's in rollback-safe mode
+    /// after a KCP minor version step-one upgrade.
+    case kcpMinorUpgradeRollbackSafeMode
     /// Encodes an unknown integer value.
     ///
     /// The most common cause for an unknown values is for the service to send
@@ -85,15 +78,7 @@ public struct LoggingComponentConfig: Codable, Equatable, GoogleCloudWKT._AnyPac
     public var intValue: Int? {
       switch self {
       case .unspecified: return 0
-      case .systemComponents: return 1
-      case .workloads: return 2
-      case .apiserver: return 3
-      case .scheduler: return 4
-      case .controllerManager: return 5
-      case .kcpSshd: return 7
-      case .kcpConnection: return 8
-      case .kcpHpa: return 9
-      case .kcpVpa: return 10
+      case .kcpMinorUpgradeRollbackSafeMode: return 1
       case .unknownIntValue(let v): return v
       case .unknownStringValue: return nil
       }
@@ -104,16 +89,8 @@ public struct LoggingComponentConfig: Codable, Equatable, GoogleCloudWKT._AnyPac
     /// If the enumeration was initialized with an unknown integer value, this returns `nil`.
     public var stringValue: Swift.String? {
       switch self {
-      case .unspecified: return "COMPONENT_UNSPECIFIED"
-      case .systemComponents: return "SYSTEM_COMPONENTS"
-      case .workloads: return "WORKLOADS"
-      case .apiserver: return "APISERVER"
-      case .scheduler: return "SCHEDULER"
-      case .controllerManager: return "CONTROLLER_MANAGER"
-      case .kcpSshd: return "KCP_SSHD"
-      case .kcpConnection: return "KCP_CONNECTION"
-      case .kcpHpa: return "KCP_HPA"
-      case .kcpVpa: return "KCP_VPA"
+      case .unspecified: return "MODE_UNSPECIFIED"
+      case .kcpMinorUpgradeRollbackSafeMode: return "KCP_MINOR_UPGRADE_ROLLBACK_SAFE_MODE"
       case .unknownIntValue: return nil
       case .unknownStringValue(let v): return v
       }
@@ -121,38 +98,22 @@ public struct LoggingComponentConfig: Codable, Equatable, GoogleCloudWKT._AnyPac
 
     /// Initialize from a string value.
     ///
-    /// If the value is unknown, this initializes to [`unknownStringValue`](doc:Component/unknownStringValue(_:)).
+    /// If the value is unknown, this initializes to [`unknownStringValue`](doc:Mode/unknownStringValue(_:)).
     public init(stringValue: Swift.String) {
       switch stringValue {
-      case "COMPONENT_UNSPECIFIED": self = .unspecified
-      case "SYSTEM_COMPONENTS": self = .systemComponents
-      case "WORKLOADS": self = .workloads
-      case "APISERVER": self = .apiserver
-      case "SCHEDULER": self = .scheduler
-      case "CONTROLLER_MANAGER": self = .controllerManager
-      case "KCP_SSHD": self = .kcpSshd
-      case "KCP_CONNECTION": self = .kcpConnection
-      case "KCP_HPA": self = .kcpHpa
-      case "KCP_VPA": self = .kcpVpa
+      case "MODE_UNSPECIFIED": self = .unspecified
+      case "KCP_MINOR_UPGRADE_ROLLBACK_SAFE_MODE": self = .kcpMinorUpgradeRollbackSafeMode
       default: self = .unknownStringValue(stringValue)
       }
     }
 
     /// Initialize from an integer value.
     ///
-    /// If the value is unknown, this initializes to [`unknownIntValue`](doc:Component/unknownIntValue(_:)).
+    /// If the value is unknown, this initializes to [`unknownIntValue`](doc:Mode/unknownIntValue(_:)).
     public init(intValue: Int) {
       switch intValue {
       case 0: self = .unspecified
-      case 1: self = .systemComponents
-      case 2: self = .workloads
-      case 3: self = .apiserver
-      case 4: self = .scheduler
-      case 5: self = .controllerManager
-      case 7: self = .kcpSshd
-      case 8: self = .kcpConnection
-      case 9: self = .kcpHpa
-      case 10: self = .kcpVpa
+      case 1: self = .kcpMinorUpgradeRollbackSafeMode
       default: self = .unknownIntValue(intValue)
       }
     }
@@ -179,15 +140,7 @@ public struct LoggingComponentConfig: Codable, Equatable, GoogleCloudWKT._AnyPac
       var container = encoder.singleValueContainer()
       switch self {
       case .unspecified: return try container.encode(0)
-      case .systemComponents: return try container.encode(1)
-      case .workloads: return try container.encode(2)
-      case .apiserver: return try container.encode(3)
-      case .scheduler: return try container.encode(4)
-      case .controllerManager: return try container.encode(5)
-      case .kcpSshd: return try container.encode(7)
-      case .kcpConnection: return try container.encode(8)
-      case .kcpHpa: return try container.encode(9)
-      case .kcpVpa: return try container.encode(10)
+      case .kcpMinorUpgradeRollbackSafeMode: return try container.encode(1)
       case .unknownIntValue(let v): return try container.encode(v)
       case .unknownStringValue(let v): return try container.encode(v)
       }
@@ -195,7 +148,7 @@ public struct LoggingComponentConfig: Codable, Equatable, GoogleCloudWKT._AnyPac
   }
 
   public static var _anyTypeUrl: Swift.String {
-    return "type.googleapis.com/google.container.v1.LoggingComponentConfig"
+    return "type.googleapis.com/google.container.v1.RollbackSafeUpgradeStatus"
   }
   public init(fromAny any: GoogleCloudWKT.`Any`) throws {
     self = try GoogleCloudWKT._slowAnyDeserialize(Self.self, from: any)

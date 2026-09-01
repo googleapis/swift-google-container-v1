@@ -17,37 +17,19 @@
 import Foundation
 @_spi(GoogleCloudInternal) import GoogleCloudWKT
 
-/// UpgradeEvent is a notification sent to customers by the cluster server when
-/// a resource is upgrading.
-public struct UpgradeEvent: Codable, Equatable, GoogleCloudWKT._AnyPackable,
+/// CompleteControlPlaneUpgradeRequest sets the name of target cluster to
+/// complete upgrade.
+public struct CompleteControlPlaneUpgradeRequest: Codable, Equatable, GoogleCloudWKT._AnyPackable,
   Sendable
 {
-  /// The resource type that is upgrading.
-  public var resourceType: UpgradeResourceType = UpgradeResourceType()
+  /// Required. The name (project, location, cluster) of the cluster to complete
+  /// upgrade. Specified in the format `projects/*/locations/*/clusters/*`.
+  public var name: Swift.String = Swift.String()
 
-  /// The operation associated with this upgrade.
-  public var operation: Swift.String = Swift.String()
+  /// Optional. API request version that initiates this operation.
+  public var version: Swift.String = Swift.String()
 
-  /// The time when the operation was started.
-  public var operationStartTime: GoogleCloudWKT.Timestamp? = nil
-
-  /// The current version before the upgrade.
-  public var currentVersion: Swift.String = Swift.String()
-
-  /// The target version for the upgrade.
-  public var targetVersion: Swift.String = Swift.String()
-
-  /// Output only. The current emulated version before the upgrade.
-  public var currentEmulatedVersion: Swift.String = Swift.String()
-
-  /// Output only. The target emulated version for the upgrade.
-  public var targetEmulatedVersion: Swift.String = Swift.String()
-
-  /// Optional relative path to the resource. For example in node pool upgrades,
-  /// the relative path of the node pool.
-  public var resource: Swift.String = Swift.String()
-
-  /// Initialize a new instance of `UpgradeEvent`.
+  /// Initialize a new instance of `CompleteControlPlaneUpgradeRequest`.
   public init() {}
 
   /// Use `config` to return a new instance of this object, with some fields updated.
@@ -55,7 +37,7 @@ public struct UpgradeEvent: Codable, Equatable, GoogleCloudWKT._AnyPackable,
   /// Commonly used to initialize the value, for example:
   ///
   /// ```
-  /// let value = UpgradeEvent().with { $0.resourceType = ... }
+  /// let value = CompleteControlPlaneUpgradeRequest().with { $0.name = ... }
   /// ```
   public func with(_ config: (inout Self) throws -> Swift.Void) rethrows -> Self {
     var copy = self
@@ -64,7 +46,7 @@ public struct UpgradeEvent: Codable, Equatable, GoogleCloudWKT._AnyPackable,
   }
 
   public static var _anyTypeUrl: Swift.String {
-    return "type.googleapis.com/google.container.v1.UpgradeEvent"
+    return "type.googleapis.com/google.container.v1.CompleteControlPlaneUpgradeRequest"
   }
   public init(fromAny any: GoogleCloudWKT.`Any`) throws {
     self = try GoogleCloudWKT._slowAnyDeserialize(Self.self, from: any)
